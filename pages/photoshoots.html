@@ -232,7 +232,7 @@
           </div>
         </div>
         <div class="ps-tier__options">
-          <p class="ps-tier__quote-text">Film, television and large commercial productions are quoted individually. Please <a href="#photoshoots-enquiry">contact us for a customised proposal</a>.</p>
+          <p class="ps-tier__quote-text">Film, television and large commercial productions are quoted individually. Please <a href="contact.html">contact us for a customised proposal</a>.</p>
         </div>
       </article>
 
@@ -295,7 +295,7 @@
       <span class="ev-cta__kicker">Available year round: Terranora, NSW</span>
       <h2 class="ev-cta__title">Book your <em>shoot.</em></h2>
       <p class="ev-cta__lede">Send us your brief: dates, crew size and what you&rsquo;re creating, and we&rsquo;ll confirm availability and next steps.</p>
-      <a href="#photoshoots-enquiry" class="cta">
+      <a href="contact.html" class="cta">
         <span class="cta__label">
           <span class="cta__text">Enquire about a shoot</span>
           <span class="cta__text" aria-hidden="true">Enquire about a shoot</span>
@@ -309,117 +309,6 @@
       </a>
     </div>
   </section>
-
-  <!-- Enquiry form -->
-  <section class="ev-enquiry" id="photoshoots-enquiry">
-    <div class="ev-enquiry__inner">
-      <div class="ev-enquiry__head">
-        <span class="ev-enquiry__tag">Enquire</span>
-        <h2 class="ev-enquiry__title">Tell us about your <em>production.</em></h2>
-        <p class="ev-enquiry__lede">Dates, crew size and what you&rsquo;re creating: we&rsquo;ll come back with availability and next steps.</p>
-      </div>
-
-      <form class="contact-form" id="contactForm" novalidate>
-
-        <div class="cf-field" data-animate>
-          <label for="cf-name">Let us know your name.</label>
-          <input type="text" id="cf-name" name="name"
-            placeholder="Your name"
-            autocomplete="name" required maxlength="100" />
-        </div>
-
-        <div class="cf-field" data-animate>
-          <label for="cf-email">And your best email?</label>
-          <input type="email" id="cf-email" name="email"
-            placeholder="your@email.com"
-            autocomplete="email" required maxlength="200" />
-        </div>
-
-        <div class="cf-field cf-field--select" data-animate>
-          <label>What&rsquo;s the occasion?</label>
-          <div class="cf-select" id="cfTopicSelect">
-            <button type="button" class="cf-select__trigger"
-                    aria-haspopup="listbox" aria-expanded="false"
-                    aria-controls="cfTopicList">
-              <span class="cf-select__val">Photoshoots &amp; Location Hire</span>
-              <span class="cf-select__arrow" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="6 9 12 15 18 9"/>
-                </svg>
-              </span>
-            </button>
-            <ul class="cf-select__list" id="cfTopicList" role="listbox" aria-hidden="true">
-              <li class="cf-select__opt" role="option" data-value="ceremonies" aria-selected="false">
-                <span class="cf-select__num">01</span>
-                <span class="cf-select__opt-text">Ceremonies &amp; Events</span>
-              </li>
-              <li class="cf-select__opt is-selected" role="option" data-value="photoshoots" aria-selected="true">
-                <span class="cf-select__num">02</span>
-                <span class="cf-select__opt-text">Photoshoots &amp; Location Hire</span>
-              </li>
-              <li class="cf-select__opt" role="option" data-value="proposal" aria-selected="false">
-                <span class="cf-select__num">03</span>
-                <span class="cf-select__opt-text">Proposal Experience</span>
-              </li>
-              <li class="cf-select__opt" role="option" data-value="other" aria-selected="false">
-                <span class="cf-select__num">04</span>
-                <span class="cf-select__opt-text">Something else</span>
-              </li>
-            </ul>
-            <select name="topic" id="cf-topic" aria-hidden="true" tabindex="-1">
-              <option value="ceremonies">Ceremonies &amp; Events</option>
-              <option value="photoshoots" selected>Photoshoots &amp; Location Hire</option>
-              <option value="proposal">Proposal Experience</option>
-              <option value="other">Something else</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="cf-field" data-animate>
-          <label for="cf-message">We&rsquo;re all ears.</label>
-          <textarea id="cf-message" name="message" rows="5"
-            placeholder="Your message&hellip;"
-            required maxlength="2000"></textarea>
-        </div>
-
-        <div class="cf-footer" data-animate>
-          <button type="submit" class="cf-submit" id="cfSubmit">
-            <span class="cf-submit__text">Send it.</span>
-            <span class="cf-submit__arrow" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </span>
-          </button>
-          <p class="cf-status" id="cfStatus" aria-live="polite"></p>
-        </div>
-
-      </form>
-    </div>
-  </section>
-
-  <!-- Thank you overlay -->
-  <div class="ct-thanks" id="ctThanks" aria-hidden="true" role="dialog" aria-label="Message sent">
-    <div class="ct-thanks__slide"></div>
-    <div class="ct-thanks__body">
-      <div class="ct-thanks__check" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="20 6 9 17 4 12"/>
-        </svg>
-      </div>
-      <h2 class="ct-thanks__title">Thank <em>you.</em></h2>
-      <p class="ct-thanks__msg">We&rsquo;ll be in touch shortly.</p>
-      <p class="ct-thanks__countdown">Heading home in&nbsp;<span id="ctTimer">4</span></p>
-      <a href="../index.html" class="ct-thanks__home">
-        <span>Return home</span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="13" height="13" aria-hidden="true">
-          <line x1="5" y1="12" x2="19" y2="12"/>
-          <polyline points="12 5 19 12 12 19"/>
-        </svg>
-      </a>
-    </div>
-  </div>
 
   <!-- Footer -->
   <div class="footer-runway" aria-hidden="true"></div>
