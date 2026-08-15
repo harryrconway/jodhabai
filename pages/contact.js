@@ -110,6 +110,19 @@
 
   if (!form || !status || !submitBtn || !thanks) return;
 
+  /* ---- Reset a stale thank-you state restored from the back/forward
+     cache (e.g. pressing Back after a submission redirected away) ---- */
+  window.addEventListener('pageshow', function (e) {
+    if (!e.persisted) return;
+    thanks.classList.remove('is-active');
+    thanks.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    submitBtn.classList.remove('is-sending');
+    submitBtn.disabled = false;
+    status.textContent = '';
+    status.classList.remove('is-error');
+  });
+
   function sanitize(str, max) {
     return String(str).replace(/<[^>]*>/g, '').trim().slice(0, max || 2000);
   }
