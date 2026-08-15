@@ -992,10 +992,10 @@
 .occasion {
   position: relative;
   display: grid;
-  grid-template-columns: 84px 1fr minmax(240px, 340px);
+  grid-template-columns: 148px 84px 1fr minmax(240px, 340px);
   align-items: center;
   gap: 28px;
-  padding: 40px 8px;
+  padding: 32px 8px;
   border-top: 1px solid var(--line);
   color: var(--ink);
   /* Scroll-in state — index.js adds .is-revealed. Reveal animates
@@ -1094,9 +1094,31 @@
   transform: rotate(45deg);
 }
 
-/* Inline image strip — mobile only */
+/* Persistent thumbnail — gives each row real visual weight instead
+   of relying only on the cursor-trailing label for imagery. */
 .occasion__thumb {
-  display: none;
+  display: block;
+  position: relative;
+  width: 148px;
+  aspect-ratio: 4 / 5;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--cream-2);
+}
+
+.occasion__thumb img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.04);
+  transition: transform 0.8s var(--ease);
+}
+
+.occasion:hover .occasion__thumb img {
+  transform: scale(1.1);
 }
 
 .occasions__cta {
