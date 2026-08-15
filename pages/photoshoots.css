@@ -1,14 +1,6 @@
-/* =========================================================
-   events.css — Events page in the site's cream editorial
-   language: inset-image hero (mirrors the homepage hero),
-   alternating corner-marked chapter pairs (mirrors the
-   homepage occasions ledger), cream typographic closing CTA.
-   Builds on tokens from ../index.css and page.css.
-   ========================================================= */
+/* photoshoots.css — Photoshoots & Location Hire page */
 
-/* =========================================================
-   HERO — inset image frame on cream, compresses on scroll
-   ========================================================= */
+/* Reuse ev-hero from events.css — import the hero block */
 .ev-hero {
   position: relative;
   z-index: 2;
@@ -45,6 +37,27 @@
 
 @keyframes evHeroZoom {
   to { transform: scale(1); }
+}
+
+/* Hero split three ways — same slow zoom per photo, side by side
+   instead of one full-bleed background. */
+.ev-hero__triptych {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: flex;
+}
+
+.ev-hero__triptych .ev-hero__img {
+  position: relative;
+  inset: auto;
+  flex: 1 1 0;
+  /* Images default to min-width: auto (their intrinsic size), which
+     overrides flex-grow and stops them settling at an equal third —
+     this forces the equal split regardless of each photo's own size. */
+  min-width: 0;
+  width: auto;
+  height: 100%;
 }
 
 .ev-hero__darken {
@@ -111,290 +124,303 @@
 }
 
 /* =========================================================
-   CHAPTERS — alternating editorial pairs on cream
+   INTRO
    ========================================================= */
-.ev-chapters {
-  position: relative;
-  z-index: 2;
+.ps-intro {
   background: var(--cream);
-  padding: 110px 56px 40px;
-}
-
-.ev-chapter {
-  display: grid;
-  grid-template-columns: 1.05fr 1fr;
-  gap: clamp(36px, 5vw, 80px);
-  align-items: center;
-  max-width: 1280px;
-  margin: 0 auto 110px;
-  /* Clears the fixed Jodha Bai/Book now/Menu pills when a link (e.g.
-     the homepage's Lotus House card) jumps straight to a chapter's id. */
-  scroll-margin-top: 140px;
-}
-
-.ev-chapter:last-child {
-  margin-bottom: 60px;
-}
-
-.ev-chapter--flip .ev-chapter__media {
-  order: 2;
-}
-
-/* ---- Image frame with the site's corner marks ---- */
-.ev-chapter__media {
-  position: relative;
-  margin: 0;
-  aspect-ratio: 4 / 5;
-  border-radius: 22px;
-  overflow: hidden;
-  background: var(--cream-2);
-  /* Scroll-in state — events.js adds .is-revealed */
+  padding: 110px 56px 0;
   opacity: 0;
-  transform: translateY(48px);
-  transition:
-    opacity 0.9s var(--ease),
-    transform 0.9s var(--ease);
-  will-change: transform, opacity;
+  transform: translateY(32px);
+  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
 }
 
-.ev-chapter__media img {
+.ps-intro.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ps-intro__inner {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.ps-intro__tag {
+  display: block;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 28px;
+}
+
+.ps-intro__lede {
+  font-family: "Instrument Serif", var(--serif), Georgia, serif;
+  font-size: clamp(20px, 2vw, 28px);
+  line-height: 1.55;
+  color: var(--ink);
+  margin: 0;
+}
+
+/* =========================================================
+   TIERS — pricing menu
+   ========================================================= */
+.ps-tiers {
+  background: var(--cream);
+  padding: 80px 56px 40px;
+}
+
+.ps-tiers__inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.ps-tier {
+  border-top: 1px solid var(--line);
+  padding: 56px 0;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: clamp(32px, 4vw, 80px);
+  align-items: start;
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+}
+
+.ps-tier.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ps-tier:last-child {
+  padding-bottom: 0;
+}
+
+.ps-tier__cat {
+  display: block;
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(22px, 2.4vw, 34px);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.ps-tier__cap {
+  display: block;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.ps-option {
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
+}
+
+.ps-option:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.ps-option__name {
+  display: block;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+
+.ps-option__inc {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ps-option__inc li {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--muted);
+  padding-left: 14px;
+  position: relative;
+}
+
+.ps-option__inc li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+.ps-tier__multiday {
+  margin: 20px 0 0;
+  font-family: "Instrument Serif", var(--serif), Georgia, serif;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--accent);
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+}
+
+.ps-tier--quote .ps-tier__quote-text {
+  font-family: "Instrument Serif", var(--serif), Georgia, serif;
+  font-size: clamp(17px, 1.6vw, 22px);
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+}
+
+.ps-tier--quote .ps-tier__quote-text a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* =========================================================
+   GALLERY
+   ========================================================= */
+.ps-gallery {
+  background: var(--cream);
+  padding: 80px 56px 60px;
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+}
+
+.ps-gallery.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ps-gallery__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.ps-gallery__tag {
+  display: block;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 36px;
+}
+
+.ps-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.ps-gallery__frame {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  margin: 0;
+  background: var(--cream-2);
+}
+
+.ps-gallery__frame img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transform: scale(1.14);
-  transition: transform 1.3s var(--ease);
-  will-change: transform;
+  transition: transform 0.8s var(--ease);
 }
 
-.ev-chapter.is-revealed .ev-chapter__media {
-  opacity: 1;
-  transform: translateY(0);
+.ps-gallery__frame:hover img {
+  transform: scale(1.06);
 }
 
-.ev-chapter.is-revealed .ev-chapter__media img {
-  transform: scale(1.02);
-}
-
-.ev-chapter:hover .ev-chapter__media img {
-  transform: scale(1.08);
-}
-
-/* ---- Text side ---- */
-.ev-chapter__body {
-  /* Scroll-in state — trails the image slightly */
-  opacity: 0;
-  transform: translateY(36px);
-  transition:
-    opacity 0.9s var(--ease) 0.12s,
-    transform 0.9s var(--ease) 0.12s;
-  will-change: transform, opacity;
-}
-
-.ev-chapter.is-revealed .ev-chapter__body {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.ev-chapter__num {
-  display: block;
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: 15px;
-  color: var(--accent);
-  margin-bottom: 18px;
-}
-
-.ev-chapter__title {
-  font-family: var(--serif);
-  font-weight: 300;
-  font-size: clamp(40px, 5.4vw, 84px);
-  line-height: 0.98;
-  letter-spacing: -0.02em;
-  color: var(--ink);
-  margin: 0 0 24px;
-}
-
-.ev-chapter__title em {
-  font-family: "Instrument Serif", "Fraunces", Georgia, serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 0.72em;
-  color: var(--accent);
-  white-space: nowrap;
-}
-
-.ev-chapter__text {
-  font-family: var(--sans);
-  font-size: clamp(15px, 1.1vw, 16px);
-  font-weight: 300;
-  line-height: 1.75;
-  color: var(--muted);
-  max-width: 46ch;
-  margin: 0 0 32px;
-}
-
-/* ---- Chapter link — circle arrow + label, mirrors occasions rows ---- */
-.ev-chapter__link {
-  display: inline-flex;
-  align-items: center;
-  gap: 16px;
-  font-family: var(--sans);
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--ink);
-  transition: gap 0.35s var(--ease);
-}
-
-.ev-chapter__link:hover {
-  gap: 20px;
-}
-
-.ev-chapter__link-arrow {
-  flex: 0 0 auto;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 1px solid var(--line);
-  display: grid;
-  place-items: center;
-  color: var(--ink);
-  transition:
-    background 0.4s var(--ease),
-    border-color 0.4s var(--ease),
-    transform 0.4s var(--ease);
-}
-
-.ev-chapter__link-arrow svg {
-  width: 17px;
-  height: 17px;
-}
-
-.ev-chapter__link:hover .ev-chapter__link-arrow {
-  background: var(--ink);
-  border-color: rgba(255, 255, 255, 0.2);
-  color: var(--cream);
-  transform: rotate(45deg);
-}
-
-/* =========================================================
-   SCOPE — the full breadth of occasions hosted, as a clean
-   hairline tag grid rather than another photo/text chapter.
-   ========================================================= */
-.ev-scope {
-  position: relative;
-  z-index: 2;
+.ps-productions {
   background: var(--cream);
-  padding: 0 56px 90px;
+  padding: 20px 56px 60px;
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
 }
 
-.ev-scope__inner {
+.ps-productions.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ps-productions__inner {
   max-width: 1280px;
   margin: 0 auto;
 }
 
-.ev-scope__head {
-  max-width: 640px;
-  margin-bottom: 48px;
-}
-
-.ev-scope__tag {
+.ps-productions__tag {
   display: block;
   font-family: var(--sans);
   font-size: 11px;
   font-weight: 500;
-  letter-spacing: 0.32em;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 18px;
+  color: var(--accent);
+  margin-bottom: 14px;
 }
 
-.ev-scope__title {
+.ps-productions__lede {
   font-family: var(--serif);
   font-weight: 300;
-  font-size: clamp(30px, 3.6vw, 48px);
-  line-height: 1.05;
-  letter-spacing: -0.02em;
+  font-size: clamp(20px, 2.2vw, 26px);
   color: var(--ink);
-  margin: 0;
+  max-width: 560px;
+  line-height: 1.4;
+  margin: 0 0 32px;
 }
 
-.ev-scope__title em {
-  font-family: "Instrument Serif", "Fraunces", Georgia, serif;
-  font-style: italic;
-  font-weight: 400;
-  color: var(--accent);
-}
-
-.ev-scope__grid {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.ps-productions__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid var(--line);
-  border-left: 1px solid var(--line);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
 }
 
-.ev-scope__item {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 30px 26px;
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  font-family: "Instrument Serif", "Fraunces", Georgia, serif;
-  font-style: italic;
-  font-size: clamp(18px, 1.6vw, 22px);
-  color: var(--ink);
-  transition: background 0.35s var(--ease), color 0.35s var(--ease);
+.ps-productions__frame {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  aspect-ratio: 2 / 3;
+  margin: 0;
+  background: var(--cream-2);
 }
 
-.ev-scope__mark {
-  flex: 0 0 auto;
-  font-size: 13px;
-  font-style: normal;
-  color: var(--accent);
-  transition: color 0.35s var(--ease);
+.ps-productions__frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s var(--ease);
 }
 
-.ev-scope__item:hover {
-  background: var(--ink);
-  color: var(--cream);
-}
-
-.ev-scope__item:hover .ev-scope__mark {
-  color: rgba(243, 237, 225, 0.7);
-}
-
-@media (max-width: 960px) {
-  .ev-scope__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 720px) {
-  .ev-scope {
-    padding: 0 20px 60px;
-  }
-  .ev-scope__head {
-    margin-bottom: 32px;
-  }
-  .ev-scope__grid {
-    grid-template-columns: 1fr;
-  }
-  .ev-scope__item {
-    padding: 22px 4px;
-    font-size: 17px;
-  }
+.ps-productions__frame:hover img {
+  transform: scale(1.06);
 }
 
 /* =========================================================
-   CLOSING CTA — cream, centred, gold pill, lift-off edge
+   CLOSING CTA — reuse ev-cta from events
    ========================================================= */
 .ev-cta {
   position: relative;
@@ -537,35 +563,21 @@
    REDUCED MOTION
    ========================================================= */
 @media (prefers-reduced-motion: reduce) {
-  .ev-hero__img {
-    animation: none;
-    transform: scale(1);
-  }
-  .ev-chapter__media,
-  .ev-chapter__media img,
-  .ev-chapter__body,
-  .ev-cta__inner {
-    transition: none !important;
-    transform: none !important;
-    opacity: 1 !important;
-  }
+  .ev-hero__img { animation: none; transform: scale(1); }
+  .ps-intro,
+  .ps-tier,
+  .ps-productions,
+  .ps-gallery,
+  .ev-cta__inner { transition: none !important; transform: none !important; opacity: 1 !important; }
 }
 
 /* =========================================================
    RESPONSIVE
    ========================================================= */
 @media (max-width: 960px) {
-  .ev-chapter {
+  .ps-tier {
     grid-template-columns: 1fr;
-    gap: 28px;
-    margin-bottom: 88px;
-  }
-  /* Image always leads on small screens regardless of --flip */
-  .ev-chapter--flip .ev-chapter__media {
-    order: 0;
-  }
-  .ev-chapter__media {
-    aspect-ratio: 4 / 3;
+    gap: 24px;
   }
 }
 
@@ -576,46 +588,31 @@
     height: auto;
     aspect-ratio: 1 / 1;
   }
-  .ev-hero__frame {
-    border-radius: 20px;
-  }
-  .ev-hero__content {
-    padding: 0 24px 72px;
-  }
-  .ev-hero__title {
-    font-size: clamp(42px, 13vw, 64px);
-  }
-  .ev-hero__lede {
-    font-size: 16px;
-  }
+  .ev-hero__frame { border-radius: 20px; }
+  .ev-hero__content { padding: 0 24px 72px; }
+  .ev-hero__title { font-size: clamp(42px, 13vw, 64px); }
+  .ev-hero__lede { font-size: 16px; }
 
-  .ev-chapters {
-    padding: 72px 20px 24px;
-  }
-  .ev-chapter {
-    margin-bottom: 72px;
-  }
-  .ev-chapter__media {
-    border-radius: 18px;
-  }
-  .ev-chapter__title {
-    font-size: clamp(34px, 11vw, 52px);
-  }
-  .ev-chapter__text {
-    max-width: 100%;
-  }
-  .ev-chapter__link-arrow {
-    width: 38px;
-    height: 38px;
+  .ps-intro { padding: 72px 20px 0; }
+  .ps-tiers { padding: 56px 20px 24px; }
+  .ps-productions { padding: 16px 20px 40px; }
+  .ps-gallery { padding: 56px 20px 40px; }
+
+  .ps-productions__grid,
+  .ps-gallery__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
 
   .ev-cta {
     padding: 88px 24px 120px;
     border-radius: 0 0 28px 28px;
   }
-  .ev-cta__title {
-    font-size: clamp(38px, 12vw, 56px);
-  }
+  .ev-cta__title { font-size: clamp(38px, 12vw, 56px); }
+}
+
+@media (max-width: 480px) {
+  .ps-gallery__grid { grid-template-columns: 1fr; }
 }
 
 

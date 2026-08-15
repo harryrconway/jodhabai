@@ -1,10 +1,5 @@
-/* events.js — Events page in the shared cream language.
-   1. Hero: side compression + darken on scroll (mirrors the homepage
-      and Our Love Story heroes).
-   2. Chapters: one-shot rise-in reveal per chapter pair.
-   3. Closing CTA: one-shot fade-up. */
+/* photoshoots.js — hero scroll + section reveal animations */
 
-/* ---- Hero: compress inward + darken on scroll ---- */
 (function evHeroScroll() {
   const hero   = document.querySelector(".ev-hero");
   const darken = document.querySelector(".ev-hero__darken");
@@ -45,32 +40,30 @@
   update();
 })();
 
-/* ---- Chapter reveal ---- */
-(function evChapterReveal() {
-  const chapters = document.querySelectorAll("[data-story]");
-  if (!chapters.length) return;
+(function sectionReveal() {
+  const items = document.querySelectorAll("[data-story]");
+  if (!items.length) return;
 
   if (!("IntersectionObserver" in window)) {
-    chapters.forEach((c) => c.classList.add("is-revealed"));
+    items.forEach(function(el) { el.classList.add("is-revealed"); });
     return;
   }
 
   const obs = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
+    function(entries) {
+      entries.forEach(function(entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add("is-revealed");
           obs.unobserve(entry.target);
         }
       });
     },
-    { threshold: 0.28 }
+    { threshold: 0.18 }
   );
-  chapters.forEach((c) => obs.observe(c));
+  items.forEach(function(el) { obs.observe(el); });
 })();
 
-/* ---- Closing CTA reveal ---- */
-(function evCtaReveal() {
+(function ctaReveal() {
   const cta = document.querySelector(".ev-cta");
   if (!cta) return;
 
@@ -80,8 +73,8 @@
   }
 
   const obs = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
+    function(entries) {
+      entries.forEach(function(entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add("is-visible");
           obs.unobserve(entry.target);

@@ -136,9 +136,9 @@
 })();
 
 /* ------------------------------------------------------------------
-   Residences — staggered rise-in for the three dwelling plates.
+   Generic staggered rise-in reveal for any [data-reveal] element.
    ------------------------------------------------------------------ */
-(function residencesReveal() {
+(function staggeredReveal() {
   const plates = document.querySelectorAll("[data-reveal]");
   if (!plates.length) return;
 

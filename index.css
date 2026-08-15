@@ -230,145 +230,41 @@
 }
 
 /* =========================================================
-   PHOTOSHOOTS TEASER — three-photo split banner + copy, in
-   place of the old dedicated Photoshoots page. Same equal-
-   thirds triptych technique as the sub-page heroes used to
-   use, scaled down to an in-page section.
+   ABOUT JODHA BAI ESTATE — replaces the old three-residences
+   accommodation section. Two-column: the estate's real story
+   (Fatepur Sikri origin, the seven year build) beside a short
+   column of concrete facts, echoing the how-it-works numbered
+   list treatment.
    ========================================================= */
-.ps-teaser {
-  position: relative;
-  z-index: 2;
-  background: var(--cream);
-  padding: 0 56px 120px;
-}
-
-.ps-teaser__inner {
-  position: relative;
-  max-width: 1280px;
-  height: min(70vh, 640px);
-  min-height: 460px;
-  margin: 0 auto;
-  border-radius: 40px;
-  overflow: hidden;
-  isolation: isolate;
-}
-
-.ps-teaser__triptych {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  display: flex;
-}
-
-.ps-teaser__triptych img {
-  flex: 1 1 0;
-  /* Images default to min-width: auto, which overrides flex-grow and
-     stops them settling at an equal third — force it explicitly. */
-  min-width: 0;
-  width: auto;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.ps-teaser__scrim {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: linear-gradient(to top, rgba(20, 21, 15, 0.88) 0%, rgba(20, 21, 15, 0.4) 42%, rgba(20, 21, 15, 0) 72%);
-  pointer-events: none;
-}
-
-.ps-teaser__content {
-  position: relative;
-  z-index: 2;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 0 52px 52px;
-  color: var(--cream);
-}
-
-.ps-teaser__tag {
-  display: block;
-  font-family: var(--sans);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: rgba(243, 237, 225, 0.75);
-  margin-bottom: 18px;
-}
-
-.ps-teaser__title {
-  font-family: var(--serif);
-  font-weight: 300;
-  font-size: clamp(34px, 4.6vw, 58px);
-  line-height: 1.05;
-  letter-spacing: -0.02em;
-  color: var(--cream);
-  margin: 0 0 18px;
-}
-
-.ps-teaser__title em {
-  font-family: "Instrument Serif", "Fraunces", Georgia, serif;
-  font-style: italic;
-  font-weight: 400;
-  color: rgba(243, 237, 225, 0.85);
-}
-
-.ps-teaser__lede {
-  font-family: var(--sans);
-  font-size: 16px;
-  line-height: 1.6;
-  color: rgba(243, 237, 225, 0.82);
-  max-width: 52ch;
-  margin: 0 0 32px;
-}
-
-@media (max-width: 720px) {
-  .ps-teaser {
-    padding: 0 14px 72px;
-  }
-  .ps-teaser__inner {
-    height: auto;
-    aspect-ratio: 3 / 4;
-    min-height: 0;
-    border-radius: 24px;
-  }
-  .ps-teaser__content {
-    padding: 0 24px 32px;
-  }
-  .ps-teaser__title { font-size: clamp(30px, 9vw, 42px); }
-  .ps-teaser__lede { font-size: 15px; }
-}
-
-/* =========================================================
-   THE RESIDENCES — quiet editorial plates. Three registered
-   dwellings presented museum-caption style: photo above, name
-   and one-liner beneath. Supports the estate's STRA licence
-   and five-star accommodation story without competing with
-   the occasions ledger above or the gallery below.
-   ========================================================= */
-.residences {
+.about-estate {
   position: relative;
   z-index: 2;
   background: var(--cream);
   padding: 20px 56px 120px;
 }
 
-.residences__inner {
+.about-estate__inner {
   max-width: 1280px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 72px;
+  align-items: start;
 }
 
-.residences__head {
-  max-width: 720px;
-  margin-bottom: 56px;
+.about-estate__copy {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+  will-change: transform, opacity;
 }
 
-.residences__tag {
+.about-estate__copy.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-estate__tag {
   display: block;
   font-family: var(--sans);
   font-size: 11px;
@@ -379,147 +275,124 @@
   margin-bottom: 20px;
 }
 
-.residences__title {
+.about-estate__title {
   font-family: var(--serif);
   font-weight: 300;
   font-size: clamp(34px, 4.4vw, 64px);
-  line-height: 1.02;
+  line-height: 1.05;
   letter-spacing: -0.02em;
   color: var(--ink);
-  margin: 0 0 20px;
+  margin: 0 0 24px;
 }
 
-.residences__title em {
+.about-estate__title em {
   font-family: "Instrument Serif", "Fraunces", Georgia, serif;
   font-style: italic;
   font-weight: 400;
   color: var(--accent);
 }
 
-.residences__lede {
-  font-family: "Instrument Serif", "Fraunces", Georgia, serif;
-  font-size: clamp(16px, 1.4vw, 20px);
-  line-height: 1.6;
+.about-estate__lede {
+  font-family: var(--sans);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.75;
   color: var(--muted);
-  max-width: 52ch;
-  margin: 0;
+  max-width: 56ch;
+  margin: 0 0 32px;
 }
 
-.residences__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-}
-
-.residence {
-  display: block;
-  margin: 0;
+.about-estate__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
   text-decoration: none;
-  color: inherit;
-  /* Scroll-in state — index.js adds .is-revealed */
+}
+
+.about-estate__link-arrow {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  display: grid;
+  place-items: center;
+  transition: background 0.35s var(--ease), border-color 0.35s var(--ease),
+    color 0.35s var(--ease), transform 0.35s var(--ease);
+}
+
+.about-estate__link-arrow svg {
+  width: 16px;
+  height: 16px;
+}
+
+.about-estate__link:hover .about-estate__link-arrow {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--cream);
+  transform: rotate(45deg);
+}
+
+.about-estate__facts {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 8px;
   opacity: 0;
   transform: translateY(40px);
-  transition:
-    opacity 0.9s var(--ease) var(--reveal-delay, 0ms),
-    transform 0.9s var(--ease) var(--reveal-delay, 0ms);
+  transition: opacity 0.9s var(--ease) 0.12s, transform 0.9s var(--ease) 0.12s;
   will-change: transform, opacity;
 }
 
-.residence.is-revealed {
+.about-estate__facts.is-revealed {
   opacity: 1;
   transform: translateY(0);
 }
 
-.residence__media {
-  position: relative;
-  display: block;
-  aspect-ratio: 4 / 5;
-  border-radius: 22px;
-  overflow: hidden;
-  background: var(--cream-2);
+.about-estate__fact {
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
 }
 
-.residence__media img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transform: scale(1.04);
-  transition: transform 1s var(--ease);
-  will-change: transform;
-}
-
-.residence:hover .residence__media img {
-  transform: scale(1.09);
-}
-
-.residence__caption {
-  display: block;
-  padding: 20px 6px 0;
-}
-
-.residence__name {
+.about-estate__fact-num {
   display: block;
   font-family: var(--serif);
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(21px, 1.9vw, 27px);
-  letter-spacing: -0.01em;
-  color: var(--ink);
-  margin-bottom: 8px;
+  font-size: clamp(26px, 2.4vw, 34px);
+  color: var(--accent);
+  margin-bottom: 10px;
 }
 
-.residence__desc {
+.about-estate__fact-label {
   display: block;
   font-family: var(--sans);
   font-size: 14px;
   font-weight: 300;
   line-height: 1.6;
   color: var(--muted);
-  max-width: 34ch;
-}
-
-.residence__stra {
-  display: block;
-  font-family: var(--sans);
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-top: 10px;
-}
-
-.residences__note {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin: 56px 0 0;
-  font-family: var(--sans);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.residences__note-stars {
-  font-size: 12px;
-  letter-spacing: 2px;
-  color: var(--accent);
-  line-height: 1;
+  max-width: 32ch;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .residence,
-  .residence__media img {
+  .about-estate__copy,
+  .about-estate__facts {
     transition: none;
-  }
-  .residence {
     opacity: 1;
     transform: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .about-estate__inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
   }
 }
 
@@ -1473,24 +1346,8 @@
     margin-top: 44px;
   }
 
-  .residences {
+  .about-estate {
     padding: 8px 20px 80px;
-  }
-  .residences__head {
-    margin-bottom: 36px;
-  }
-  .residences__grid {
-    grid-template-columns: 1fr;
-    gap: 36px;
-  }
-  .residence__media {
-    aspect-ratio: 4 / 3;
-    border-radius: 18px;
-  }
-  .residences__note {
-    margin-top: 40px;
-    flex-wrap: wrap;
-    line-height: 1.7;
   }
 }
 
