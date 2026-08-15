@@ -399,6 +399,7 @@
 .ev-previous {
   position: relative;
   z-index: 2;
+  background: var(--cream);
   padding: 0 56px 60px;
 }
 
