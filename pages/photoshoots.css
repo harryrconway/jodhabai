@@ -127,6 +127,8 @@
    INTRO
    ========================================================= */
 .ps-intro {
+  position: relative;
+  z-index: 2;
   background: var(--cream);
   padding: 110px 56px 0;
   opacity: 0;
@@ -167,6 +169,8 @@
    TIERS — pricing menu
    ========================================================= */
 .ps-tiers {
+  position: relative;
+  z-index: 2;
   background: var(--cream);
   padding: 80px 56px 40px;
 }
@@ -294,6 +298,8 @@
    GALLERY
    ========================================================= */
 .ps-gallery {
+  position: relative;
+  z-index: 2;
   background: var(--cream);
   padding: 80px 56px 60px;
   opacity: 0;
@@ -352,6 +358,8 @@
 }
 
 .ps-productions {
+  position: relative;
+  z-index: 2;
   background: var(--cream);
   padding: 20px 56px 60px;
   opacity: 0;
@@ -426,6 +434,8 @@
   position: relative;
   z-index: 2;
   background: var(--cream);
+  border-radius: 0 0 40px 40px;
+  box-shadow: 0 60px 80px -50px rgba(0, 0, 0, 0.55);
   padding: 120px 32px 160px;
   text-align: center;
 }
@@ -537,6 +547,7 @@
 
   .ev-cta {
     padding: 88px 24px 120px;
+    border-radius: 0 0 28px 28px;
   }
   .ev-cta__title { font-size: clamp(38px, 12vw, 56px); }
 }
