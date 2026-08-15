@@ -282,6 +282,135 @@
 }
 
 /* =========================================================
+   PROPOSAL EXPERIENCE — structured package beneath the
+   Milestones & Proposals chapter, editorial two-column layout
+   echoing the Photoshoots page's package tiers.
+   ========================================================= */
+.ev-proposal {
+  position: relative;
+  z-index: 2;
+  background: var(--cream);
+  padding: 0 56px 90px;
+}
+
+.ev-proposal__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(40px, 6vw, 100px);
+  align-items: start;
+  border-top: 1px solid var(--line);
+  padding-top: 56px;
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+}
+
+.ev-proposal.is-revealed .ev-proposal__inner {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ev-proposal__tag {
+  display: block;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+.ev-proposal__title {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(30px, 3.6vw, 48px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 0 0 20px;
+}
+
+.ev-proposal__title em {
+  font-family: "Instrument Serif", "Fraunces", Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--accent);
+}
+
+.ev-proposal__lede {
+  font-family: var(--sans);
+  font-size: clamp(15px, 1.3vw, 17px);
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 42ch;
+  margin: 0;
+}
+
+.ev-proposal__inc {
+  list-style: none;
+  margin: 0 0 28px;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.ev-proposal__inc li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-family: var(--sans);
+  font-size: clamp(15px, 1.2vw, 16px);
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.ev-proposal__mark {
+  flex: 0 0 auto;
+  font-size: 12px;
+  color: var(--accent);
+  margin-top: 3px;
+}
+
+.ev-proposal__addons {
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+  padding-top: 22px;
+  margin: 0 0 32px;
+}
+
+.ev-proposal__addons-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+  .ev-proposal__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 720px) {
+  .ev-proposal {
+    padding: 0 20px 60px;
+  }
+  .ev-proposal__inner {
+    padding-top: 40px;
+  }
+}
+
+/* =========================================================
    SCOPE — the full breadth of occasions hosted, as a clean
    hairline tag grid rather than another photo/text chapter.
    ========================================================= */

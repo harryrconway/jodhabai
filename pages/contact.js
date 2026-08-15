@@ -71,32 +71,35 @@
     });
   }());
 
-  /* ---- Pre-fill from ?package= (photoshoot package enquiry links) ---- */
+  /* ---- Pre-fill from ?topic=&package= (package enquiry links) ---- */
   (function prefillPackage() {
     var params = new URLSearchParams(window.location.search);
-    var pkg = params.get('package');
-    if (!pkg) return;
+    var topic  = params.get('topic');
+    var pkg    = params.get('package');
+    if (!topic && !pkg) return;
 
-    var wrap = document.getElementById('cfTopicSelect');
-    if (wrap) {
-      var valEl  = wrap.querySelector('.cf-select__val');
-      var native = wrap.querySelector('select');
-      var opts   = wrap.querySelectorAll('.cf-select__opt');
-      var target = wrap.querySelector('.cf-select__opt[data-value="photoshoots"]');
-      if (target && valEl && native) {
-        opts.forEach(function (o) {
-          o.classList.remove('is-selected');
-          o.setAttribute('aria-selected', 'false');
-        });
-        target.classList.add('is-selected');
-        target.setAttribute('aria-selected', 'true');
-        valEl.textContent = target.querySelector('.cf-select__opt-text').textContent;
-        native.value = 'photoshoots';
+    if (topic) {
+      var wrap = document.getElementById('cfTopicSelect');
+      if (wrap) {
+        var valEl  = wrap.querySelector('.cf-select__val');
+        var native = wrap.querySelector('select');
+        var opts   = wrap.querySelectorAll('.cf-select__opt');
+        var target = wrap.querySelector('.cf-select__opt[data-value="' + topic + '"]');
+        if (target && valEl && native) {
+          opts.forEach(function (o) {
+            o.classList.remove('is-selected');
+            o.setAttribute('aria-selected', 'false');
+          });
+          target.classList.add('is-selected');
+          target.setAttribute('aria-selected', 'true');
+          valEl.textContent = target.querySelector('.cf-select__opt-text').textContent;
+          native.value = topic;
+        }
       }
     }
 
     var messageEl = document.getElementById('cf-message');
-    if (messageEl && !messageEl.value) {
+    if (pkg && messageEl && !messageEl.value) {
       messageEl.value = "I'd like to enquire about the " + pkg + " package.";
     }
   }());
