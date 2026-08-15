@@ -19,12 +19,10 @@
   gap: 14px;
 }
 
-/* ---- Persistent top-left "Jodha Bai" home link ----
-   Mirrors .hero__actions' fixed positioning on the opposite corner
-   and reuses .cta's black-glass pill (gradient, border, shine sweep)
-   so it stays legible over both photo heroes and cream sections.
-   No icon chip, so padding is symmetric rather than .cta's
-   icon-side-only padding. */
+/* ---- Persistent top-left home link ----
+   Mirrors .hero__actions' fixed positioning on the opposite corner.
+   Just the logo mark, no pill background, so it needs to read
+   clearly on its own over both photo heroes and cream sections. */
 .cta.site-brand {
   /* Compound selector so this beats .cta's own `position: relative`
      regardless of source order (.cta is defined later in this file
@@ -34,8 +32,17 @@
   top: 56px;
   left: 60px;
   z-index: 90;
-  padding: 14px 26px;
-  font-size: 18px;
+  padding: 8px;
+  /* Just the logo mark now — no pill fill/border/shadow behind it. */
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.cta.site-brand:hover {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
 }
 
 h1.site-brand-h1 {
@@ -46,11 +53,10 @@ h1.site-brand-h1 {
   .cta.site-brand {
     /* Same compound-selector fix as the base rule — .cta's own mobile
        override (later in this file) would otherwise win on the
-       shared padding/font-size properties. */
+       shared padding properties. */
     top: 14px;
     left: 14px;
-    padding: 9px 16px;
-    font-size: 13px;
+    padding: 6px;
   }
   .site-brand__logo {
     height: 15px;
@@ -58,10 +64,11 @@ h1.site-brand-h1 {
 }
 
 /* ---- Logo mark — palace icon crop, replaces the old text wordmark
-   in both compact spots (nav pill, menu overlay bar). ---- */
+   in both compact spots (nav pill, menu overlay bar). Desktop size
+   only here; mobile override above keeps its own smaller size. ---- */
 .site-brand__logo {
   display: block;
-  height: 20px;
+  height: 40px;
   width: auto;
 }
 
