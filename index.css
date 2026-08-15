@@ -729,7 +729,7 @@
 }
 
 .zoom-mosaic__line--1 {
-  font-family: "Fraunces", Georgia, serif;
+  font-family: var(--serif);
   font-weight: 300;
   font-size: clamp(40px, 6vw, 92px);
 }
