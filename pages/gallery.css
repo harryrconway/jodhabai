@@ -25,7 +25,7 @@
 
 .snake-gallery__inner {
   max-width: 1320px;
-  margin: 0 auto;
+  margin: 0 auto 64px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   /* Rows auto-size from each cell's aspect-ratio. */
@@ -33,6 +33,30 @@
   /* Partial small gaps — visible but tight, like a board's seams */
   column-gap: 12px;
   row-gap: 16px;
+}
+
+.snake-gallery__inner:last-of-type {
+  margin-bottom: 0;
+}
+
+/* ---- Section labels — Estate / Photo Shoots & Film / Ceremonies &
+   Events. Plain text markers, not part of the reveal system (only
+   .snake-cell is watched by gallery.js). ---- */
+.snake-gallery__section-title {
+  max-width: 1320px;
+  margin: 0 auto 28px;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.snake-gallery__section-title:not(:first-child) {
+  margin-top: 64px;
+  padding-top: 48px;
+  border-top: 1px solid var(--line);
 }
 
 /* =========================================================
