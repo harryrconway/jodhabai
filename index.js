@@ -166,6 +166,31 @@
 })();
 
 /* ------------------------------------------------------------------
+   Hero carousel — auto-rotating crossfade through several estate
+   photos. Click-free, no controls, matches the loader/hero's ambient
+   feel elsewhere on the homepage. Respects prefers-reduced-motion by
+   leaving the first image showing statically.
+   ------------------------------------------------------------------ */
+(function heroCarousel() {
+  const track = document.getElementById("heroCarousel");
+  if (!track) return;
+
+  const slides = track.querySelectorAll(".hero__bg");
+  if (slides.length < 2) return;
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  let index = 0;
+  const INTERVAL = 6500;
+
+  setInterval(function () {
+    slides[index].classList.remove("is-active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("is-active");
+  }, INTERVAL);
+})();
+
+/* ------------------------------------------------------------------
    Single rAF scroll loop:
    - Hero: side compression + black darkening
    - Intro: sentence-by-sentence reveal as the section enters view

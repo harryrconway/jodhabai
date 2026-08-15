@@ -35,6 +35,12 @@
   isolation: isolate;
 }
 
+.hero__carousel {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
 .hero__bg {
   position: absolute;
   inset: 0;
@@ -43,13 +49,29 @@
   object-fit: cover;
   object-position: center;
   z-index: 0;
-  transform: scale(1.04);
-  animation: heroZoom 14s var(--ease) forwards;
   border-radius: 25px;
+  opacity: 0;
+  transform: scale(1.04);
+  animation: heroBreathe 22s ease-in-out infinite;
+  transition: opacity 1.8s var(--ease);
 }
 
-@keyframes heroZoom {
-  to { transform: scale(1); }
+.hero__bg.is-active {
+  opacity: 1;
+  z-index: 1;
+}
+
+@keyframes heroBreathe {
+  0%, 100% { transform: scale(1.04); }
+  50% { transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__bg {
+    animation: none;
+    transform: scale(1);
+    transition: none;
+  }
 }
 
 .hero__vignette {
