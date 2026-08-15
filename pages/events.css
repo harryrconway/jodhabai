@@ -394,14 +394,75 @@
 }
 
 /* =========================================================
+   PREVIOUS EVENTS & CELEBRATIONS — small proof-of-work grid
+   ========================================================= */
+.ev-previous {
+  padding: 0 56px 60px;
+}
+
+.ev-previous__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.ev-previous__tag {
+  display: block;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 36px;
+}
+
+.ev-previous__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.ev-previous__frame {
+  position: relative;
+  margin: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: var(--cream-2);
+}
+
+.ev-previous__frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 720px) {
+  .ev-previous {
+    padding: 0 20px 44px;
+  }
+  .ev-previous__tag {
+    margin-bottom: 20px;
+  }
+  .ev-previous__grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .ev-previous__frame {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+/* =========================================================
    CLOSING CTA — cream, centred, gold pill, lift-off edge
    ========================================================= */
 .ev-cta {
   position: relative;
   z-index: 2;
   background: var(--cream);
-  border-radius: 0 0 40px 40px;
-  box-shadow: 0 60px 80px -50px rgba(0, 0, 0, 0.55);
   padding: 120px 32px 160px;
   text-align: center;
 }
@@ -464,73 +525,6 @@
 
 .ev-cta .cta {
   font-size: 18px;
-}
-
-/* =========================================================
-   ENQUIRY FORM WRAPPER — heading above the shared form
-   component appended at the end of this file.
-   ========================================================= */
-.ev-enquiry {
-  position: relative;
-  z-index: 2;
-  background: var(--cream);
-  padding: 100px 56px 120px;
-}
-
-.ev-enquiry__inner {
-  max-width: 680px;
-  margin: 0 auto;
-}
-
-.ev-enquiry__head {
-  margin-bottom: 56px;
-}
-
-.ev-enquiry__tag {
-  display: block;
-  font-family: var(--sans);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 18px;
-}
-
-.ev-enquiry__title {
-  font-family: var(--serif);
-  font-weight: 300;
-  font-size: clamp(32px, 3.6vw, 48px);
-  line-height: 1.05;
-  letter-spacing: -0.02em;
-  color: var(--ink);
-  margin: 0 0 16px;
-}
-
-.ev-enquiry__title em {
-  font-family: "Instrument Serif", "Fraunces", Georgia, serif;
-  font-style: italic;
-  font-weight: 400;
-  color: var(--accent);
-}
-
-.ev-enquiry__lede {
-  font-family: var(--sans);
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.6;
-  color: var(--muted);
-  max-width: 46ch;
-  margin: 0;
-}
-
-@media (max-width: 720px) {
-  .ev-enquiry {
-    padding: 64px 20px 80px;
-  }
-  .ev-enquiry__head {
-    margin-bottom: 40px;
-  }
 }
 
 /* =========================================================
@@ -611,511 +605,8 @@
 
   .ev-cta {
     padding: 88px 24px 120px;
-    border-radius: 0 0 28px 28px;
   }
   .ev-cta__title {
     font-size: clamp(38px, 12vw, 56px);
-  }
-}
-
-
-/* =========================================================
-   EMBEDDED ENQUIRY FORM — same form component as contact.html,
-   duplicated here per this project's per-page CSS convention.
-   ========================================================= */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.cf-field {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-bottom: 40px;
-}
-
-.cf-field label {
-  font-family: var(--serif);
-  font-style: italic;
-  font-weight: 300;
-  font-size: clamp(15px, 1.3vw, 18px);
-  color: var(--muted);
-  transition: color 0.3s ease;
-  pointer-events: none;
-}
-
-.cf-field:focus-within label {
-  color: var(--ink);
-}
-
-.cf-field input,
-.cf-field select,
-.cf-field textarea {
-  width: 100%;
-  font-family: "Instrument Serif", "Fraunces", Georgia, serif;
-  font-weight: 400;
-  font-size: clamp(19px, 1.8vw, 23px);
-  line-height: 1.3;
-  color: var(--ink);
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid var(--line);
-  padding: 8px 0 14px;
-  outline: none;
-  -webkit-appearance: none;
-  appearance: none;
-  transition: border-color 0.3s ease;
-}
-
-.cf-field input::placeholder,
-.cf-field textarea::placeholder {
-  color: rgba(28, 29, 26, 0.22);
-}
-
-.cf-field input:focus,
-.cf-field select:focus,
-.cf-field textarea:focus {
-  border-bottom-color: var(--ink);
-}
-
-/* Sweep underline on focus */
-.cf-field::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background: var(--ink);
-  transition: width 0.5s var(--ease);
-  pointer-events: none;
-}
-
-.cf-field:focus-within::after { width: 100%; }
-
-/* The hidden native select inside .cf-select is kept only for form
-   submission — suppress all visual styles inherited from .cf-field */
-.cf-select select {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-/* =========================================================
-   CUSTOM SELECT — numbered editorial dropdown
-   ========================================================= */
-/* Elevate this field's stacking context above later [data-animate] siblings
-   so the absolutely-positioned dropdown panel isn't painted over by them. */
-.cf-field--select {
-  z-index: 2;
-}
-
-.cf-select {
-  position: relative;
-}
-
-.cf-select__trigger {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid var(--line);
-  padding: 8px 0 14px;
-  cursor: pointer;
-  text-align: left;
-  outline: none;
-  transition: border-color 0.3s ease;
-}
-
-.cf-select__trigger:focus,
-.cf-select.is-open .cf-select__trigger {
-  border-bottom-color: var(--ink);
-}
-
-.cf-select__val {
-  font-family: "Instrument Serif", "Fraunces", Georgia, serif;
-  font-weight: 400;
-  font-size: clamp(19px, 1.8vw, 23px);
-  line-height: 1.3;
-  color: var(--ink);
-}
-
-.cf-select__arrow {
-  flex-shrink: 0;
-  color: var(--muted);
-  display: flex;
-  align-items: center;
-  transition: transform 0.4s var(--ease);
-}
-
-.cf-select__arrow svg {
-  width: 16px;
-  height: 16px;
-  display: block;
-}
-
-.cf-select.is-open .cf-select__arrow {
-  transform: rotate(180deg);
-}
-
-.cf-select__list {
-  position: absolute;
-  top: calc(100% + 6px);
-  left: 0;
-  right: 0;
-  z-index: 50;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  background: #f3ede1;
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 28px 60px -20px rgba(0, 0, 0, 0.2),
-              0 4px 16px -4px rgba(0, 0, 0, 0.08);
-  opacity: 0;
-  transform: translateY(-6px) scale(0.98);
-  pointer-events: none;
-  transform-origin: top center;
-  transition: opacity 0.28s var(--ease), transform 0.32s var(--ease);
-}
-
-.cf-select.is-open .cf-select__list {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  pointer-events: auto;
-}
-
-.cf-select__opt {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  padding: 16px 24px;
-  cursor: pointer;
-  border-bottom: 1px solid var(--line-soft);
-  transition: background 0.22s ease, padding-left 0.32s var(--ease);
-}
-
-.cf-select__opt:last-child {
-  border-bottom: none;
-}
-
-.cf-select__opt:hover {
-  background: rgba(28, 29, 26, 0.10);
-  padding-left: 32px;
-}
-
-.cf-select__opt:hover .cf-select__opt-text {
-  font-style: normal;
-  color: var(--ink);
-}
-
-.cf-select__opt:hover .cf-select__num {
-  opacity: 0.8;
-}
-
-.cf-select__opt.is-selected {
-  background: rgba(28, 29, 26, 0.03);
-}
-
-.cf-select__opt.is-selected .cf-select__num {
-  color: var(--accent);
-  opacity: 1;
-}
-
-.cf-select__num {
-  font-family: var(--sans);
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--muted);
-  opacity: 0.5;
-  flex-shrink: 0;
-  min-width: 18px;
-  transition: color 0.25s ease, opacity 0.25s ease;
-}
-
-.cf-select__opt-text {
-  font-family: "Instrument Serif", "Fraunces", Georgia, serif;
-  font-weight: 400;
-  font-style: italic;
-  font-size: clamp(17px, 1.5vw, 20px);
-  line-height: 1.2;
-  color: var(--ink);
-  transition: color 0.22s ease;
-}
-
-.cf-field textarea {
-  resize: none;
-  min-height: 120px;
-}
-
-/* Submit row */
-.cf-footer {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  margin-top: 8px;
-  flex-wrap: wrap;
-}
-
-.cf-submit {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  /* Flat black — dark sibling of the gold CTA pills */
-  background: var(--ink);
-  color: var(--cream);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 999px;
-  padding: 14px 18px 14px 28px;
-  font-family: var(--serif);
-  font-style: italic;
-  font-weight: 300;
-  font-size: clamp(18px, 1.6vw, 22px);
-  cursor: pointer;
-  white-space: nowrap;
-  box-shadow: 0 10px 28px -12px rgba(0, 0, 0, 0.5);
-  transition: background 0.3s var(--ease), border-color 0.3s var(--ease),
-              transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
-}
-
-.cf-submit:hover {
-  background: #000;
-  border-color: rgba(255, 255, 255, 0.3);
-  transform: translateY(-2px);
-  box-shadow: 0 18px 44px -16px rgba(0, 0, 0, 0.55);
-}
-
-.cf-submit__arrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  border: 1px solid rgba(243, 237, 225, 0.22);
-  flex-shrink: 0;
-  transition: transform 0.35s var(--ease), border-color 0.35s var(--ease);
-}
-
-.cf-submit__arrow svg { width: 15px; height: 15px; }
-
-.cf-submit:hover .cf-submit__arrow {
-  transform: translateX(3px);
-  border-color: rgba(243, 237, 225, 0.5);
-}
-
-.cf-submit.is-sending {
-  opacity: 0.6;
-  pointer-events: none;
-}
-
-.cf-status {
-  font-family: var(--sans);
-  font-size: 13px;
-  color: var(--accent);
-  margin: 0;
-}
-
-.cf-status.is-error { color: #b8423a; }
-
-/* =========================================================
-   THANK YOU OVERLAY
-   ========================================================= */
-.ct-thanks {
-  position: fixed;
-  inset: 0;
-  z-index: 500;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 40px;
-  pointer-events: none;
-}
-
-.ct-thanks__slide {
-  position: absolute;
-  inset: 0;
-  background: var(--overlay);
-  transform: translateY(100%);
-  transition: transform 0.75s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.ct-thanks.is-active { pointer-events: auto; }
-
-.ct-thanks.is-active .ct-thanks__slide { transform: translateY(0); }
-
-.ct-thanks__body {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.ct-thanks__check {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  border: 1px solid rgba(243, 237, 225, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 32px;
-  opacity: 0;
-  transform: scale(0.4);
-  transition: opacity 0.5s ease 0.55s,
-              transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.55s;
-}
-
-.ct-thanks__check svg { width: 22px; height: 22px; color: rgba(243, 237, 225, 0.7); }
-
-.ct-thanks.is-active .ct-thanks__check { opacity: 1; transform: scale(1); }
-
-.ct-thanks__title {
-  font-family: var(--serif);
-  font-weight: 300;
-  font-size: clamp(72px, 13vw, 148px);
-  line-height: 0.92;
-  letter-spacing: -0.03em;
-  color: var(--cream);
-  margin: 0 0 28px;
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.7s ease 0.7s, transform 0.7s ease 0.7s;
-}
-
-.ct-thanks__title em { font-style: italic; }
-
-.ct-thanks.is-active .ct-thanks__title { opacity: 1; transform: translateY(0); }
-
-.ct-thanks__msg,
-.ct-thanks__countdown {
-  font-family: var(--sans);
-  font-size: 11px;
-  font-weight: 400;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: rgba(243, 237, 225, 0.4);
-  margin: 0 0 8px;
-  opacity: 0;
-  transition: opacity 0.6s ease 1s;
-}
-
-.ct-thanks__countdown {
-  margin-bottom: 40px;
-  transition-delay: 1.1s;
-}
-
-.ct-thanks.is-active .ct-thanks__msg,
-.ct-thanks.is-active .ct-thanks__countdown { opacity: 1; }
-
-.ct-thanks__home {
-  /* Flat black, matching .cta, instead of a faint cream ghost pill —
-     border/shadow carry the definition against the overlay's
-     near-black backdrop. */
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-family: var(--sans);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(243, 237, 225, 0.75);
-  text-decoration: none;
-  padding: 12px 22px;
-  background: var(--ink);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 999px;
-  box-shadow: 0 6px 16px -10px rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  transition: opacity 0.6s ease 1.2s, color 0.3s ease, border-color 0.3s ease, background 0.3s ease;
-}
-
-.ct-thanks.is-active .ct-thanks__home { opacity: 1; }
-
-.ct-thanks__home:hover {
-  color: var(--cream);
-  border-color: rgba(255, 255, 255, 0.3);
-  background: #000;
-}
-
-@media (max-width: 720px) {
-  /* Mobile inputs: bordered boxes for clear tap targets */
-  .cf-field { gap: 5px; margin-bottom: 20px; }
-
-  .cf-field label {
-    font-size: 14px;
-  }
-
-  .cf-field input,
-  .cf-field select,
-  .cf-field textarea {
-    font-size: 19px;
-    background: rgba(28, 29, 26, 0.04);
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    padding: 12px 14px;
-  }
-
-  .cf-field input:focus,
-  .cf-field select:focus,
-  .cf-field textarea:focus {
-    border-color: var(--ink);
-    background: rgba(28, 29, 26, 0.06);
-    box-shadow: 0 0 0 3px rgba(28, 29, 26, 0.06);
-  }
-
-  /* Disable underline sweep on mobile — border handles it */
-  .cf-field::after { display: none; }
-
-  .cf-select__trigger {
-    background: rgba(28, 29, 26, 0.04);
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    padding: 12px 14px;
-  }
-
-  .cf-select.is-open .cf-select__trigger,
-  .cf-select__trigger:focus {
-    border-color: var(--ink);
-    background: rgba(28, 29, 26, 0.06);
-    box-shadow: 0 0 0 3px rgba(28, 29, 26, 0.06);
-    border-bottom-color: var(--ink);
-  }
-
-  .cf-select__list {
-    top: calc(100% + 8px);
-    border-radius: 16px;
-  }
-
-  .cf-select__opt {
-    padding: 14px 18px;
-  }
-
-  .cf-select__opt:hover {
-    padding-left: 26px;
-  }
-
-  .cf-field textarea { min-height: 100px; }
-
-  .cf-footer { margin-top: 12px; }
-
-  .cf-submit {
-    font-size: 18px;
-    padding: 13px 16px 13px 24px;
   }
 }
