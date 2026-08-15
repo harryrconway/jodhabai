@@ -370,6 +370,12 @@
   margin: 0;
 }
 
+/* Multi-paragraph chapters (e.g. The Evolution) — space consecutive
+   paragraphs apart; single-paragraph chapters are unaffected. */
+.chapter__body + .chapter__body {
+  margin-top: 22px;
+}
+
 /* ---- Chapter pair (alternating grid) ---- */
 .chapter-pair {
   display: grid;
@@ -514,10 +520,11 @@
 .chapter-sig__location {
   font-family: var(--sans);
   font-size: 12px;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.04em;
   color: var(--muted);
   opacity: 0.55;
   margin: 0;
+  max-width: 42ch;
 }
 
 /* =========================================================
