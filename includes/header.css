@@ -52,6 +52,17 @@ h1.site-brand-h1 {
     padding: 9px 16px;
     font-size: 13px;
   }
+  .site-brand__logo {
+    height: 15px;
+  }
+}
+
+/* ---- Logo mark — palace icon crop, replaces the old text wordmark
+   in both compact spots (nav pill, menu overlay bar). ---- */
+.site-brand__logo {
+  display: block;
+  height: 20px;
+  width: auto;
 }
 
 /* ---- Brand mark used inside the menu overlay top bar ---- */
@@ -69,6 +80,15 @@ h1.site-brand-h1 {
 
 .brand--light {
   color: var(--cream);
+}
+
+.brand__logo {
+  display: block;
+  height: 24px;
+  width: auto;
+  /* The icon is drawn in a warm gold, filter to pure white so it
+     reads clearly against the dark menu overlay background. */
+  filter: brightness(0) invert(1);
 }
 
 /* ---- Pill buttons used inside the menu overlay ---- */

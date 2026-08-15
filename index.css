@@ -1399,13 +1399,9 @@
 }
 
 .loader__name {
-  font-family: var(--serif);
-  font-style: italic;
-  font-weight: 300;
-  font-size: clamp(52px, 10vw, 140px);
-  line-height: 1;
-  letter-spacing: -0.02em;
-  color: var(--cream);
+  display: block;
+  width: clamp(220px, 34vw, 460px);
+  height: auto;
 }
 
 /* ---------------------------------------------------------

@@ -469,16 +469,10 @@
 
 /* ---- Massive brand mark — pinned at the very bottom, one line ---- */
 .site-footer__brand {
-  font-family: "Fraunces", Georgia, serif;
-  font-weight: 300;
-  font-size: clamp(64px, 19vw, 320px);
-  line-height: 0.85;
-  letter-spacing: -0.025em;
-  text-transform: uppercase;
-  text-align: center;
-  white-space: nowrap;
-  margin: 0;
-  color: #fff;
+  display: block;
+  width: clamp(280px, 46vw, 760px);
+  height: auto;
+  margin: 0 auto;
   /* Gentle parallax: the brand drifts up a touch as it's revealed,
      driven by footer.js via --footer-shift. */
   transform: translateY(calc(var(--footer-shift, 0) * 1px));
@@ -587,12 +581,7 @@
   }
 
   .site-footer__brand {
-    display: block;
-    width: 100%;
-    text-align: center;
-    font-size: 16vw;
-    line-height: 0.9;
-    letter-spacing: -0.02em;
+    width: 84vw;
     margin: 4px auto 0;
   }
 }
