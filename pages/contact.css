@@ -1,119 +1,180 @@
 /* =========================================================
-   contact.css — split-screen layout, minimal, responsive
+   contact.css — photo hero + single-column details/form, map
    ========================================================= */
 
 /* =========================================================
-   CONTACT — two-column split
+   HERO — inset image frame, mirrors the site's other page
+   heroes (events/photoshoots/our love story) but shorter,
+   no scroll-compress since this page doesn't need the drama.
+   ========================================================= */
+.ct-hero {
+  position: relative;
+  z-index: 2;
+  height: 62vh;
+  min-height: 460px;
+  background: var(--cream);
+  padding: 28px;
+}
+
+.ct-hero__frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  overflow: hidden;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.ct-hero__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  transform: scale(1.04);
+  animation: ctHeroZoom 14s var(--ease) forwards;
+}
+
+@keyframes ctHeroZoom {
+  to { transform: scale(1); }
+}
+
+.ct-hero__darken {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: #000;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.ct-hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.05) 0%,
+    rgba(0, 0, 0, 0.15) 45%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
+}
+
+.ct-hero__content {
+  position: relative;
+  z-index: 2;
+  padding: 0 8vw 8vh;
+  max-width: 900px;
+}
+
+.ct-hero__badge {
+  display: block;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(243, 237, 225, 0.65);
+  margin-bottom: 24px;
+}
+
+.ct-hero__title {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(48px, 7vw, 96px);
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  color: var(--cream);
+  margin: 0 0 20px;
+}
+
+.ct-hero__title em {
+  font-style: italic;
+}
+
+.ct-hero__lede {
+  font-family: "Instrument Serif", var(--serif), Georgia, serif;
+  font-size: clamp(16px, 1.4vw, 20px);
+  line-height: 1.6;
+  color: rgba(243, 237, 225, 0.85);
+  max-width: 46ch;
+  margin: 0;
+}
+
+/* =========================================================
+   DETAILS + FORM — single centred column
    ========================================================= */
 .contact {
   position: relative;
   z-index: 2;
   background: var(--cream);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  padding: 96px 56px 100px;
 }
 
-/* =========================================================
-   LEFT — sticky context panel
-   ========================================================= */
-.contact__left {
-  padding: 128px 7vw 80px 8vw;
-  border-right: 1px solid var(--line);
-  display: flex;
-  flex-direction: column;
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  align-self: start;
-  overflow: hidden;
+.contact__inner {
+  max-width: 640px;
+  margin: 0 auto;
 }
 
-/* Meta: N° 06 ——— Contact */
-.contact__eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  font-family: var(--sans);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.26em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin: 0 0 56px;
-}
-
-.contact__eyebrow em {
-  font-family: var(--serif);
-  font-style: italic;
-  font-weight: 300;
-  font-size: 14px;
-  letter-spacing: 0.04em;
-  text-transform: none;
-  color: var(--muted);
-}
-
-.contact__eyebrow-rule {
-  width: 32px;
-  height: 1px;
-  background: var(--line);
-  flex-shrink: 0;
-}
-
-/* Big title */
-.contact__title {
-  font-family: var(--serif);
-  font-weight: 300;
-  font-size: clamp(56px, 7vw, 100px);
-  line-height: 0.92;
-  letter-spacing: -0.03em;
-  color: var(--ink);
-  margin: 0 0 auto;
-}
-
-.contact__title em { font-style: italic; }
-
-/* Details — bottom of left panel */
 .contact__details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 56px;
+  padding-bottom: 48px;
+  margin-bottom: 64px;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact__detail {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  margin-bottom: 24px;
+  text-decoration: none;
 }
 
-.contact__details a,
-.contact__details span {
+.contact__detail-label {
   font-family: var(--sans);
-  font-size: 13px;
-  line-height: 1.6;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
   color: var(--muted);
+  opacity: 0.6;
+}
+
+.contact__detail-value {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: 18px;
+  color: var(--ink);
   transition: color 0.25s ease;
 }
 
-.contact__details a:hover { color: var(--ink); }
+a.contact__detail:hover .contact__detail-value {
+  color: var(--accent);
+}
 
-/* Social links */
 .contact__social {
   display: flex;
-  gap: 20px;
+  gap: 16px;
 }
 
 .contact__social a {
-  font-family: var(--sans);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--muted);
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: 18px;
+  color: var(--ink);
+  text-decoration: none;
   transition: color 0.25s ease;
 }
 
-.contact__social a:hover { color: var(--ink); }
-
-/* =========================================================
-   RIGHT — form
-   ========================================================= */
-.contact__right {
-  padding: 128px 8vw 100px 7vw;
+.contact__social a:hover {
+  color: var(--accent);
 }
 
 /* =========================================================
@@ -434,8 +495,6 @@
   z-index: 2;
   background: var(--cream);
   border-top: 1px solid var(--line);
-  border-radius: 0 0 40px 40px;
-  box-shadow: 0 60px 80px -50px rgba(0, 0, 0, 0.5);
   overflow: hidden;
 }
 
@@ -632,24 +691,12 @@
    ========================================================= */
 @media (max-width: 960px) {
   .contact {
-    grid-template-columns: 1fr;
+    padding: 72px 40px 80px;
   }
 
-  .contact__left {
-    position: static;
-    height: auto;
-    padding: 100px 40px 56px;
-    border-right: none;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .contact__title {
+  .contact__details {
+    gap: 28px 40px;
     margin-bottom: 48px;
-    font-size: clamp(56px, 10vw, 84px);
-  }
-
-  .contact__right {
-    padding: 64px 40px 96px;
   }
 
   .contact-map__embed { padding: 24px 40px 0; }
@@ -661,21 +708,25 @@
    RESPONSIVE — mobile (≤ 720px)
    ========================================================= */
 @media (max-width: 720px) {
-  .contact__left {
-    padding: 100px 24px 48px;
+  .ct-hero {
+    padding: 14px;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 3 / 4;
+  }
+  .ct-hero__frame { border-radius: 20px; }
+  .ct-hero__content { padding: 0 24px 48px; }
+  .ct-hero__title { font-size: clamp(38px, 12vw, 56px); }
+  .ct-hero__lede { font-size: 15px; }
+
+  .contact {
+    padding: 56px 20px 64px;
   }
 
-  .contact__eyebrow { margin-bottom: 32px; }
-
-  .contact__title {
-    font-size: clamp(52px, 14vw, 76px);
-    margin-bottom: 36px;
-  }
-
-  .contact__details { gap: 4px; }
-
-  .contact__right {
-    padding: 48px 24px 72px;
+  .contact__details {
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 48px;
   }
 
   /* Mobile inputs: bordered boxes for clear tap targets */
