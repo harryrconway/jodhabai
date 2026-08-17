@@ -454,15 +454,14 @@ body.menu-open {
     overflow-y: auto;
   }
   /* On mobile the list hugs its own content instead of stretching to
-     fill all remaining height. It's reordered after .menu-foot (see
-     below) and pushed to the bottom of the overlay with margin-top:
-     auto, so the layout reads regular text top-right, nav links
-     bottom-right — the reverse of the desktop stacking order. */
+     fill all remaining height, and centres in whatever vertical space
+     is left below the bar (.menu-foot is hidden on mobile — see
+     below — so the six links no longer have to share the screen with
+     it and risk needing a scroll to reach the last one). */
   .menu-list {
     flex: 0 0 auto;
     gap: 0;
-    order: 2;
-    margin-top: auto;
+    margin: auto 0;
   }
   .menu-list li {
     flex: 0 0 auto;
@@ -514,24 +513,13 @@ body.menu-open {
   .cta__icon--burger {
     gap: 4px;
   }
-  /* Same Find us / Follow / Reach out content as desktop, just
-     restacked into one column, right-aligned to match the nav links,
-     and ordered before the nav list so it sits top-right while the
-     links sit bottom-right. */
+  /* Find us / Follow / Reach out is dropped from the mobile menu
+     entirely — it's the single biggest block of vertical space here,
+     it's already duplicated in the site footer on every page, and
+     removing it is what lets all six nav links fit on screen without
+     scrolling or shrinking their type. */
   .menu-foot {
-    order: 1;
-    grid-template-columns: 1fr;
-    justify-items: end;
-    text-align: right;
-    gap: 10px;
-    margin-top: 0;
-    padding-top: 0;
-    border-top: 0;
-    font-size: 13px;
-    line-height: 1.4;
-  }
-  .menu-foot__label {
-    margin-bottom: 4px;
+    display: none;
   }
   .btn {
     padding: 10px 14px;
