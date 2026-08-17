@@ -59,16 +59,18 @@ h1.site-brand-h1 {
     padding: 6px;
   }
   .site-brand__logo {
-    height: 15px;
+    height: 24px;
   }
 }
 
-/* ---- Logo mark — palace icon crop, replaces the old text wordmark
-   in both compact spots (nav pill, menu overlay bar). Desktop size
-   only here; mobile override above keeps its own smaller size. ---- */
+/* ---- Logo mark — full lockup (palace icon + JODHA BAI ESTATE
+   wordmark), matching the footer's brand mark. Desktop size only
+   here; mobile override above keeps its own smaller size. Height is
+   scaled up from the old icon-only crop so the icon itself keeps the
+   same rendered size, with the wordmark now revealed beneath it. ---- */
 .site-brand__logo {
   display: block;
-  height: 40px;
+  height: 64px;
   width: auto;
 }
 
