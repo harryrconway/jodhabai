@@ -103,7 +103,7 @@
 
 .ev-hero__lede {
   font-family: var(--serif);
-  font-size: clamp(17px, 1.5vw, 22px);
+  font-size: clamp(18px, 1.6vw, 23px);
   line-height: 1.6;
   color: rgba(243, 237, 225, 0.85);
   max-width: 54ch;
@@ -228,8 +228,8 @@
 
 .ev-chapter__text {
   font-family: var(--sans);
-  font-size: clamp(15px, 1.1vw, 16px);
-  font-weight: 300;
+  font-size: clamp(17px, 1.3vw, 18px);
+  font-weight: 400;
   line-height: 1.75;
   color: var(--muted);
   max-width: 46ch;
@@ -342,7 +342,7 @@
 
 .ev-proposal__lede {
   font-family: var(--sans);
-  font-size: clamp(15px, 1.3vw, 17px);
+  font-size: clamp(16px, 1.4vw, 19px);
   line-height: 1.7;
   color: var(--muted);
   max-width: 42ch;
@@ -362,7 +362,7 @@
   align-items: flex-start;
   gap: 14px;
   font-family: var(--sans);
-  font-size: clamp(15px, 1.2vw, 16px);
+  font-size: clamp(16px, 1.3vw, 18px);
   color: var(--ink);
   line-height: 1.5;
 }
@@ -650,7 +650,7 @@
 
 .ev-cta__lede {
   font-family: var(--serif);
-  font-size: clamp(17px, 1.4vw, 20px);
+  font-size: clamp(18px, 1.5vw, 21px);
   line-height: 1.6;
   color: var(--muted);
   max-width: 46ch;

@@ -99,7 +99,7 @@
 
 .ct-hero__lede {
   font-family: var(--serif);
-  font-size: clamp(16px, 1.4vw, 20px);
+  font-size: clamp(17px, 1.5vw, 21px);
   line-height: 1.6;
   color: rgba(243, 237, 225, 0.85);
   max-width: 46ch;
@@ -196,8 +196,8 @@ a.contact__detail:hover .contact__detail-value {
 .cf-field label {
   font-family: var(--serif);
   font-style: italic;
-  font-weight: 300;
-  font-size: clamp(17px, 1.6vw, 20px);
+  font-weight: 400;
+  font-size: clamp(18px, 1.7vw, 21px);
   color: var(--muted);
   transition: color 0.3s ease;
   pointer-events: none;
