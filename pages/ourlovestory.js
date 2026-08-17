@@ -41,9 +41,7 @@
 
 /* ---- Chapter reveal ---- */
 (function chapterReveal() {
-  const items = document.querySelectorAll(
-    ".chapter-pair, .chapter-full"
-  );
+  const items = document.querySelectorAll("[data-story]");
   if (!items.length || !("IntersectionObserver" in window)) return;
 
   const obs = new IntersectionObserver(

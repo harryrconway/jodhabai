@@ -153,6 +153,17 @@
   margin: 0;
 }
 
+.story-hero__span {
+  display: block;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(13px, 1.2vw, 16px);
+  letter-spacing: 0.08em;
+  color: rgba(243, 237, 225, 0.4);
+  margin-top: 14px;
+}
+
 .story-hero__scroll {
   position: absolute;
   bottom: 44px;
@@ -317,6 +328,75 @@
   overflow: clip;
 }
 
+/* ---- Timeline spine — one continuous line built from a matching
+   full-height segment on every chapter, so it reads as unbroken down
+   the page without any section-height math. ---- */
+.story-spine {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: var(--line);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ---- Chapter marker — a small ring sitting on the spine, one per
+   chapter. Desktop only (see responsive section): its fixed vertical
+   offset is tuned to each variant's own top padding, which shifts too
+   unpredictably on mobile (image-first stacking, viewport-relative
+   heights) to keep aligned reliably. ---- */
+.chapter__marker {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: var(--accent);
+  z-index: 3;
+}
+
+.chapter-pair .chapter__marker { top: 96px; }
+.chapter-full .chapter__marker { top: 132px; }
+
+.chapter-full--dark .chapter__marker {
+  background: var(--ink);
+  border-color: rgba(243, 237, 225, 0.2);
+}
+
+/* ---- Giant watermark year — the primary new typographic device.
+   Sits behind the real content, centred within its own chapter. ---- */
+.chapter__year-giant {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(120px, 22vw, 340px);
+  line-height: 1;
+  color: var(--ink);
+  opacity: 0.05;
+  letter-spacing: -0.02em;
+  z-index: 0;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.chapter-full--dark .chapter__year-giant {
+  color: var(--cream);
+  opacity: 0.07;
+}
+
 /* ---- Shared chapter text styles ---- */
 .chapter__meta {
   display: flex;
@@ -378,6 +458,7 @@
 
 /* ---- Chapter pair (alternating grid) ---- */
 .chapter-pair {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 640px;
@@ -390,6 +471,8 @@
 }
 
 .chapter-pair__text {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   padding: 80px 7vw;
@@ -400,6 +483,8 @@
 }
 
 .chapter-pair__image {
+  position: relative;
+  z-index: 1;
   overflow: hidden;
   background: #e8e0d0;
   border-radius: 20px;
@@ -419,16 +504,41 @@
 
 /* ---- Chapter full (centred, full-width, all cream) ---- */
 .chapter-full {
+  position: relative;
   background: var(--cream);
   padding: 120px 32px;
   border-top: 1px solid var(--line);
 }
 
+/* The story's two hardship beats — the 2009 diagnosis and the 2020
+   health decline — are the only dark panels on an otherwise light
+   page, so the tonal shift itself carries meaning. */
 .chapter-full--dark {
-  background: var(--cream);
+  background: var(--ink);
+  border-top-color: rgba(243, 237, 225, 0.12);
+}
+
+.chapter-full--dark .chapter__num,
+.chapter-full--dark .chapter__year {
+  color: rgba(243, 237, 225, 0.55);
+}
+
+.chapter-full--dark .chapter__rule {
+  background: rgba(243, 237, 225, 0.16);
+}
+
+.chapter-full--dark .chapter__title,
+.chapter-full--dark .chapter-full__quote {
+  color: var(--cream);
+}
+
+.chapter-full--dark .chapter__body {
+  color: rgba(243, 237, 225, 0.75);
 }
 
 .chapter-full__inner {
+  position: relative;
+  z-index: 1;
   max-width: 780px;
   margin: 0 auto;
 }
@@ -490,7 +600,7 @@
 }
 
 /* =========================================================
-   INLINE CHAPTER SIGNATURE (Chapter 05)
+   INLINE CHAPTER SIGNATURE (Chapter 07)
    ========================================================= */
 .chapter-sig {
   margin-top: 52px;
@@ -545,6 +655,22 @@
 
   .story-intro {
     padding: 72px 28px;
+  }
+
+  /* Marker's desktop offset is tuned to a text-first layout; mobile's
+     image-first stacking + viewport-relative image heights make a
+     reliable fixed offset impractical, so it's hidden here and the
+     spine + giant year carry the timeline motif instead. */
+  .chapter__marker {
+    display: none;
+  }
+
+  .story-spine {
+    left: 28px;
+  }
+
+  .chapter__year-giant {
+    font-size: clamp(90px, 26vw, 160px);
   }
 
   .chapter-pair {
@@ -605,6 +731,14 @@
 
   .story-intro {
     padding: 52px 20px;
+  }
+
+  .story-spine {
+    left: 20px;
+  }
+
+  .chapter__year-giant {
+    font-size: clamp(72px, 28vw, 120px);
   }
 
   .chapter-pair__image {
