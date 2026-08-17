@@ -665,12 +665,20 @@
     display: none;
   }
 
+  /* Sits inside the existing 20-28px content padding/margin rather
+     than matching it, so it reads as a rail clear of the text and
+     images instead of running through their left edge. */
   .story-spine {
-    left: 28px;
+    left: 10px;
   }
 
   .chapter__year-giant {
-    font-size: clamp(90px, 26vw, 160px);
+    font-size: clamp(80px, 22vw, 140px);
+    opacity: 0.04;
+  }
+
+  .chapter-full--dark .chapter__year-giant {
+    opacity: 0.05;
   }
 
   .chapter-pair {
@@ -734,11 +742,11 @@
   }
 
   .story-spine {
-    left: 20px;
+    left: 6px;
   }
 
   .chapter__year-giant {
-    font-size: clamp(72px, 28vw, 120px);
+    font-size: clamp(60px, 24vw, 100px);
   }
 
   .chapter-pair__image {
