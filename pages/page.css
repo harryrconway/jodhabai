@@ -72,7 +72,7 @@
 
 /* ---- Lede ---- */
 .page-hero__lede {
-  font-family: "Instrument Serif", "Fraunces", Georgia, serif;
+  font-family: var(--serif);
   font-weight: 400;
   font-size: clamp(18px, 1.5vw, 22px);
   line-height: 1.62;

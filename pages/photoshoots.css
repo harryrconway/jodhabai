@@ -115,7 +115,7 @@
 }
 
 .ev-hero__lede {
-  font-family: "Instrument Serif", var(--serif), Georgia, serif;
+  font-family: var(--serif);
   font-size: clamp(17px, 1.5vw, 22px);
   line-height: 1.6;
   color: rgba(243, 237, 225, 0.85);
@@ -158,7 +158,7 @@
 }
 
 .ps-intro__lede {
-  font-family: "Instrument Serif", var(--serif), Georgia, serif;
+  font-family: var(--serif);
   font-size: clamp(20px, 2vw, 28px);
   line-height: 1.55;
   color: var(--ink);
@@ -271,7 +271,7 @@
 
 .ps-tier__multiday {
   margin: 20px 0 0;
-  font-family: "Instrument Serif", var(--serif), Georgia, serif;
+  font-family: var(--serif);
   font-style: italic;
   font-size: 15px;
   line-height: 1.5;
@@ -281,7 +281,7 @@
 }
 
 .ps-tier--quote .ps-tier__quote-text {
-  font-family: "Instrument Serif", var(--serif), Georgia, serif;
+  font-family: var(--serif);
   font-size: clamp(17px, 1.6vw, 22px);
   line-height: 1.6;
   color: var(--muted);
@@ -481,14 +481,14 @@
 }
 
 .ev-cta__title em {
-  font-family: "Instrument Serif", "Fraunces", Georgia, serif;
+  font-family: var(--serif);
   font-style: italic;
   font-weight: 400;
   color: var(--accent);
 }
 
 .ev-cta__lede {
-  font-family: "Instrument Serif", var(--serif), Georgia, serif;
+  font-family: var(--serif);
   font-size: clamp(17px, 1.4vw, 20px);
   line-height: 1.6;
   color: var(--muted);

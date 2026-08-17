@@ -124,7 +124,7 @@
 /* Body copy — large editorial serif. Each character is its own span and
    "fills with ink" from top to bottom as the user scrolls past. */
 .intro__paragraph {
-  font-family: "Instrument Serif", "Fraunces", Georgia, serif;
+  font-family: var(--serif);
   font-weight: 400;
   font-size: clamp(20px, 2.7vw, 46px);
   line-height: 1.15;
@@ -178,7 +178,7 @@
   align-items: center;
   gap: 22px;
   margin-bottom: 32px;
-  font-family: "Inter", system-ui, sans-serif;
+  font-family: var(--sans);
   font-size: 12px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -186,7 +186,7 @@
 }
 
 .intro__index {
-  font-family: "Instrument Serif", "Fraunces", Georgia, serif;
+  font-family: var(--serif);
   font-style: italic;
   font-size: 22px;
   letter-spacing: 0;
@@ -212,7 +212,7 @@
   align-items: center;
   gap: 14px;
   margin-top: 36px;
-  font-family: "Instrument Serif", "Fraunces", Georgia, serif;
+  font-family: var(--serif);
   font-size: 18px;
   color: rgba(15, 15, 13, 0.62);
 }
@@ -286,7 +286,7 @@
 }
 
 .about-estate__title em {
-  font-family: "Instrument Serif", "Fraunces", Georgia, serif;
+  font-family: var(--serif);
   font-style: italic;
   font-weight: 400;
   color: var(--accent);
@@ -708,7 +708,7 @@
 }
 
 .zoom-mosaic__line--2 {
-  font-family: "Instrument Serif", "Fraunces", Georgia, serif;
+  font-family: var(--serif);
   font-style: italic;
   font-weight: 400;
   font-size: clamp(60px, 9.5vw, 152px);
@@ -822,7 +822,7 @@
 }
 
 .how-it-works__title em {
-  font-family: "Instrument Serif", "Fraunces", Georgia, serif;
+  font-family: var(--serif);
   font-style: italic;
   font-weight: 400;
   color: rgba(243, 237, 225, 0.75);
@@ -936,7 +936,7 @@
 }
 
 .occasions__lede {
-  font-family: "Instrument Serif", "Fraunces", Georgia, serif;
+  font-family: var(--serif);
   font-size: clamp(17px, 1.5vw, 21px);
   line-height: 1.55;
   color: var(--muted);
@@ -1010,7 +1010,7 @@
 }
 
 .occasion__title em {
-  font-family: "Instrument Serif", "Fraunces", Georgia, serif;
+  font-family: var(--serif);
   font-style: italic;
   font-weight: 400;
   color: var(--accent);
