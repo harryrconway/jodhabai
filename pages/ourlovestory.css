@@ -219,7 +219,7 @@
 
 .story-intro__lede {
   font-family: var(--serif);
-  font-weight: 400;
+  font-weight: 700;
   font-size: clamp(22px, 2.4vw, 34px);
   line-height: 1.45;
   color: var(--ink);
@@ -443,7 +443,7 @@
 
 .chapter__body {
   font-family: var(--serif);
-  font-weight: 400;
+  font-weight: 700;
   font-size: clamp(18px, 1.5vw, 23px);
   line-height: 1.68;
   color: var(--ink-soft);

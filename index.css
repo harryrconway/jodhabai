@@ -295,7 +295,7 @@
 .about-estate__lede {
   font-family: var(--sans);
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.75;
   color: var(--muted);
   max-width: 56ch;
@@ -937,6 +937,7 @@
 
 .occasions__lede {
   font-family: var(--serif);
+  font-weight: 700;
   font-size: clamp(18px, 1.6vw, 22px);
   line-height: 1.55;
   color: var(--muted);

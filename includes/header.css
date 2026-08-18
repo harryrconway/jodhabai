@@ -386,6 +386,7 @@ h1.site-brand-h1 {
 }
 
 .menu-foot {
+  font-weight: 700;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;

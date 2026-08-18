@@ -103,6 +103,7 @@
 
 .ev-hero__lede {
   font-family: var(--serif);
+  font-weight: 700;
   font-size: clamp(18px, 1.6vw, 23px);
   line-height: 1.6;
   color: rgba(243, 237, 225, 0.85);
@@ -229,7 +230,7 @@
 .ev-chapter__text {
   font-family: var(--sans);
   font-size: clamp(17px, 1.3vw, 18px);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.75;
   color: var(--muted);
   max-width: 46ch;
@@ -306,7 +307,7 @@
 .ev-notice__text {
   font-family: var(--serif);
   font-style: italic;
-  font-weight: 400;
+  font-weight: 700;
   font-size: clamp(19px, 1.9vw, 25px);
   line-height: 1.5;
   color: var(--ink);
@@ -384,6 +385,7 @@
 
 .ev-proposal__lede {
   font-family: var(--sans);
+  font-weight: 700;
   font-size: clamp(16px, 1.4vw, 19px);
   line-height: 1.7;
   color: var(--muted);
@@ -404,6 +406,7 @@
   align-items: flex-start;
   gap: 14px;
   font-family: var(--sans);
+  font-weight: 700;
   font-size: clamp(16px, 1.3vw, 18px);
   color: var(--ink);
   line-height: 1.5;
@@ -418,6 +421,7 @@
 
 .ev-proposal__addons {
   font-family: var(--sans);
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.7;
   color: var(--muted);
@@ -538,7 +542,7 @@
 .ev-scope__item-desc {
   font-family: var(--sans);
   font-size: 13px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.5;
   color: var(--muted);
   transition: color 0.35s var(--ease);
@@ -718,6 +722,7 @@
 
 .ev-cta__lede {
   font-family: var(--serif);
+  font-weight: 700;
   font-size: clamp(18px, 1.5vw, 21px);
   line-height: 1.6;
   color: var(--muted);
