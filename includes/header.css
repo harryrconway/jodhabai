@@ -360,7 +360,7 @@ h1.site-brand-h1 {
   width: 100%;
   font-family: var(--serif);
   font-weight: 300;
-  font-size: clamp(28px, 5.2vw, 80px);
+  font-size: clamp(24px, 4.4vw, 68px);
   line-height: 1;
   color: var(--cream);
   text-align: right;
@@ -474,7 +474,7 @@ body.menu-open {
     border-top: 1px solid rgba(243, 237, 225, 0.14);
   }
   .menu-link {
-    font-size: clamp(32px, 11vw, 64px);
+    font-size: clamp(26px, 9vw, 54px);
     padding: 16px 0;
   }
   .hero__actions {
