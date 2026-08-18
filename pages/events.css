@@ -282,9 +282,51 @@
 }
 
 /* =========================================================
-   PROPOSAL EXPERIENCE — structured package beneath the
-   Milestones & Proposals chapter, editorial two-column layout
-   echoing the Photoshoots page's package tiers.
+   LEGAL NOTICE — the client-flagged statement distinguishing
+   location-based photography/film hire from function or event
+   venue hire. Deliberately its own emphasized, bordered block
+   rather than folded into another paragraph.
+   ========================================================= */
+.ev-notice {
+  position: relative;
+  z-index: 2;
+  background: var(--cream);
+  padding: 0 56px 56px;
+}
+
+.ev-notice__inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 48px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  text-align: center;
+}
+
+.ev-notice__text {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(19px, 1.9vw, 25px);
+  line-height: 1.5;
+  color: var(--ink);
+  margin: 0;
+}
+
+@media (max-width: 720px) {
+  .ev-notice {
+    padding: 0 20px 40px;
+  }
+  .ev-notice__inner {
+    padding: 28px 24px;
+    border-radius: 14px;
+  }
+}
+
+/* =========================================================
+   PROPOSAL PHOTOGRAPHY — structured package beneath the
+   chapters, editorial two-column layout echoing the
+   Photoshoots page's package tiers.
    ========================================================= */
 .ev-proposal {
   position: relative;
@@ -464,23 +506,42 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   border-top: 1px solid var(--line);
   border-left: 1px solid var(--line);
 }
 
 .ev-scope__item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 14px;
   padding: 30px 26px;
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
+  transition: background 0.35s var(--ease), color 0.35s var(--ease);
+}
+
+.ev-scope__item-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ev-scope__item-title {
   font-family: var(--serif);
   font-style: italic;
   font-size: clamp(18px, 1.6vw, 22px);
   color: var(--ink);
-  transition: background 0.35s var(--ease), color 0.35s var(--ease);
+  transition: color 0.35s var(--ease);
+}
+
+.ev-scope__item-desc {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--muted);
+  transition: color 0.35s var(--ease);
 }
 
 .ev-scope__mark {
@@ -488,22 +549,24 @@
   font-size: 13px;
   font-style: normal;
   color: var(--accent);
+  margin-top: 6px;
   transition: color 0.35s var(--ease);
 }
 
 .ev-scope__item:hover {
   background: var(--ink);
+}
+
+.ev-scope__item:hover .ev-scope__item-title {
   color: var(--cream);
+}
+
+.ev-scope__item:hover .ev-scope__item-desc {
+  color: rgba(243, 237, 225, 0.65);
 }
 
 .ev-scope__item:hover .ev-scope__mark {
   color: rgba(243, 237, 225, 0.7);
-}
-
-@media (max-width: 960px) {
-  .ev-scope__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 @media (max-width: 720px) {
@@ -518,7 +581,12 @@
   }
   .ev-scope__item {
     padding: 22px 4px;
+  }
+  .ev-scope__item-title {
     font-size: 17px;
+  }
+  .ev-scope__item-desc {
+    font-size: 12px;
   }
 }
 
