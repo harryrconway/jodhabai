@@ -83,7 +83,7 @@
   font-weight: 500;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: rgba(243, 237, 225, 0.6);
+  color: rgba(243, 237, 225, 0.8);
   margin-bottom: 28px;
 }
 
@@ -280,48 +280,6 @@
   border-color: rgba(255, 255, 255, 0.2);
   color: var(--cream);
   transform: rotate(45deg);
-}
-
-/* =========================================================
-   LEGAL NOTICE — the client-flagged statement distinguishing
-   location-based photography/film hire from function or event
-   venue hire. Deliberately its own emphasized, bordered block
-   rather than folded into another paragraph.
-   ========================================================= */
-.ev-notice {
-  position: relative;
-  z-index: 2;
-  background: var(--cream);
-  padding: 0 56px 56px;
-}
-
-.ev-notice__inner {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px 48px;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  text-align: center;
-}
-
-.ev-notice__text {
-  font-family: var(--serif);
-  font-style: italic;
-  font-weight: 700;
-  font-size: clamp(19px, 1.9vw, 25px);
-  line-height: 1.5;
-  color: var(--ink);
-  margin: 0;
-}
-
-@media (max-width: 720px) {
-  .ev-notice {
-    padding: 0 20px 40px;
-  }
-  .ev-notice__inner {
-    padding: 28px 24px;
-    border-radius: 14px;
-  }
 }
 
 /* =========================================================
