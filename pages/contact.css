@@ -98,13 +98,17 @@
 }
 
 .ct-hero__lede {
+  display: inline-block;
   font-family: var(--serif);
   font-weight: 700;
   font-size: clamp(17px, 1.5vw, 21px);
   line-height: 1.6;
-  color: rgba(243, 237, 225, 0.85);
+  color: rgba(243, 237, 225, 0.95);
   max-width: 46ch;
   margin: 0;
+  background: rgba(20, 21, 15, 0.72);
+  padding: 14px 20px;
+  border-radius: 14px;
 }
 
 /* =========================================================

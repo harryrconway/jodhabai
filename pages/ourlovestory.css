@@ -144,24 +144,31 @@
 }
 
 .story-hero__sub {
+  display: inline-block;
   font-family: var(--sans);
   font-size: clamp(12px, 1.1vw, 15px);
   font-weight: 400;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(243, 237, 225, 0.55);
+  color: rgba(243, 237, 225, 0.95);
   margin: 0;
+  background: rgba(20, 21, 15, 0.72);
+  padding: 10px 16px;
+  border-radius: 12px;
 }
 
 .story-hero__span {
-  display: block;
+  display: inline-block;
   font-family: var(--serif);
   font-style: italic;
   font-weight: 300;
   font-size: clamp(13px, 1.2vw, 16px);
   letter-spacing: 0.08em;
-  color: rgba(243, 237, 225, 0.4);
+  color: rgba(243, 237, 225, 0.9);
   margin-top: 14px;
+  background: rgba(20, 21, 15, 0.72);
+  padding: 8px 16px;
+  border-radius: 12px;
 }
 
 .story-hero__scroll {
