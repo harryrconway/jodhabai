@@ -50,7 +50,7 @@
   align-items: center;
   justify-content: space-between;
   font-family: var(--sans);
-  font-size: 12px;
+  font-size: 24px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.78);
@@ -69,7 +69,7 @@
 .footer-col__title {
   display: block;
   font-family: var(--sans);
-  font-size: 11px;
+  font-size: 22px;
   font-weight: 500;
   letter-spacing: 0.24em;
   text-transform: uppercase;
@@ -80,7 +80,7 @@
 .footer-col__lede {
   font-family: var(--serif);
   font-weight: 700;
-  font-size: clamp(20px, 1.8vw, 28px);
+  font-size: clamp(40px, 3.6vw, 56px);
   line-height: 1.3;
   color: rgba(255, 255, 255, 0.92);
   margin: 0;
@@ -96,7 +96,7 @@
   gap: 10px;
   font-family: var(--sans);
   font-weight: 600;
-  font-size: 14px;
+  font-size: 28px;
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.85);
 }
@@ -161,7 +161,7 @@
   padding-bottom: 32px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   font-family: var(--sans);
-  font-size: 11px;
+  font-size: 22px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.45);
@@ -262,7 +262,7 @@
   border: none;
   cursor: pointer;
   font-family: var(--sans);
-  font-size: 11px;
+  font-size: 22px;
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -379,7 +379,7 @@
 .legal-modal__text {
   font-family: var(--sans);
   font-weight: 700;
-  font-size: 16px;
+  font-size: 32px;
   line-height: 1.75;
   color: rgba(255, 255, 255, 0.72);
   margin: 0 0 18px;
@@ -417,7 +417,7 @@
 .legal-modal__list li {
   font-family: var(--sans);
   font-weight: 600;
-  font-size: 15px;
+  font-size: 30px;
   line-height: 1.65;
   color: rgba(255, 255, 255, 0.85);
   padding-left: 20px;

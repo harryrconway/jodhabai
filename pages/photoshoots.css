@@ -92,7 +92,7 @@
 .ev-hero__badge {
   display: block;
   font-family: var(--sans);
-  font-size: 11px;
+  font-size: 22px;
   font-weight: 500;
   letter-spacing: 0.3em;
   text-transform: uppercase;
@@ -117,7 +117,7 @@
 .ev-hero__lede {
   font-family: var(--serif);
   font-weight: 700;
-  font-size: clamp(18px, 1.6vw, 23px);
+  font-size: clamp(36px, 3.2vw, 46px);
   line-height: 1.6;
   color: rgba(243, 237, 225, 0.85);
   max-width: 54ch;
@@ -150,7 +150,7 @@
 .ps-intro__tag {
   display: block;
   font-family: var(--sans);
-  font-size: 11px;
+  font-size: 22px;
   font-weight: 500;
   letter-spacing: 0.28em;
   text-transform: uppercase;
@@ -217,7 +217,7 @@
 .ps-tier__cap {
   display: block;
   font-family: var(--sans);
-  font-size: 12px;
+  font-size: 24px;
   font-weight: 400;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -256,7 +256,7 @@
 
 .ps-option__inc li {
   font-family: var(--sans);
-  font-size: 15px;
+  font-size: 30px;
   font-weight: 700;
   line-height: 1.5;
   color: var(--muted);
@@ -276,7 +276,7 @@
   font-family: var(--serif);
   font-weight: 700;
   font-style: italic;
-  font-size: 16px;
+  font-size: 32px;
   line-height: 1.5;
   color: var(--accent);
   border-top: 1px solid var(--line);
@@ -324,7 +324,7 @@
 .ps-gallery__tag {
   display: block;
   font-family: var(--sans);
-  font-size: 11px;
+  font-size: 22px;
   font-weight: 500;
   letter-spacing: 0.28em;
   text-transform: uppercase;
@@ -384,7 +384,7 @@
 .ps-productions__tag {
   display: block;
   font-family: var(--sans);
-  font-size: 11px;
+  font-size: 22px;
   font-weight: 500;
   letter-spacing: 0.28em;
   text-transform: uppercase;
@@ -467,7 +467,7 @@
 .ev-cta__kicker {
   display: inline-block;
   font-family: var(--sans);
-  font-size: 11px;
+  font-size: 22px;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--muted);

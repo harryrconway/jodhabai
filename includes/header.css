@@ -392,7 +392,7 @@ h1.site-brand-h1 {
   gap: 32px;
   padding-top: 20px;
   border-top: 1px solid rgba(243, 237, 225, 0.1);
-  font-size: 16px;
+  font-size: 32px;
   line-height: 1.6;
   color: rgba(243, 237, 225, 0.75);
 }
@@ -401,7 +401,7 @@ h1.site-brand-h1 {
 
 .menu-foot__label {
   display: block;
-  font-size: 11px;
+  font-size: 22px;
   text-transform: uppercase;
   letter-spacing: 0.22em;
   color: rgba(243, 237, 225, 0.75);

@@ -126,7 +126,7 @@
 .intro__paragraph {
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(20px, 2.7vw, 46px);
+  font-size: clamp(26px, 3.4vw, 58px);
   line-height: 1.15;
   letter-spacing: -0.012em;
   color: var(--ink);
@@ -267,7 +267,7 @@
 .about-estate__tag {
   display: block;
   font-family: var(--sans);
-  font-size: 11px;
+  font-size: 22px;
   font-weight: 500;
   letter-spacing: 0.32em;
   text-transform: uppercase;
@@ -294,7 +294,7 @@
 
 .about-estate__lede {
   font-family: var(--sans);
-  font-size: 18px;
+  font-size: 36px;
   font-weight: 700;
   line-height: 1.75;
   color: var(--muted);
@@ -307,7 +307,7 @@
   align-items: center;
   gap: 16px;
   font-family: var(--sans);
-  font-size: 12px;
+  font-size: 24px;
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -365,7 +365,7 @@
   font-family: var(--serif);
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(26px, 2.4vw, 34px);
+  font-size: clamp(52px, 4.8vw, 68px);
   color: var(--accent);
   margin-bottom: 10px;
 }
@@ -373,7 +373,7 @@
 .about-estate__fact-label {
   display: block;
   font-family: var(--sans);
-  font-size: 14px;
+  font-size: 28px;
   font-weight: 300;
   line-height: 1.6;
   color: var(--muted);
@@ -803,7 +803,7 @@
 .how-it-works__tag {
   display: block;
   font-family: var(--sans);
-  font-size: 11px;
+  font-size: 22px;
   font-weight: 500;
   letter-spacing: 0.32em;
   text-transform: uppercase;
@@ -921,7 +921,7 @@
 
 .occasions__tag {
   font-family: var(--sans);
-  font-size: 11px;
+  font-size: 22px;
   font-weight: 500;
   letter-spacing: 0.32em;
   text-transform: uppercase;
@@ -938,7 +938,7 @@
 .occasions__lede {
   font-family: var(--serif);
   font-weight: 700;
-  font-size: clamp(18px, 1.6vw, 22px);
+  font-size: clamp(36px, 3.2vw, 44px);
   line-height: 1.55;
   color: var(--muted);
   margin: 0;
@@ -1033,7 +1033,7 @@
 
 .occasion__desc {
   font-family: var(--sans);
-  font-size: 14px;
+  font-size: 28px;
   font-weight: 300;
   line-height: 1.6;
   color: var(--muted);
@@ -1134,7 +1134,7 @@
 
 .occasion-label__text {
   font-family: var(--sans);
-  font-size: 11px;
+  font-size: 22px;
   font-weight: 500;
   letter-spacing: 0.24em;
   text-transform: uppercase;
@@ -1399,7 +1399,7 @@
 
 .loader__welcome {
   font-family: var(--sans);
-  font-size: 12px;
+  font-size: 24px;
   font-weight: 400;
   letter-spacing: 0.3em;
   text-transform: uppercase;
