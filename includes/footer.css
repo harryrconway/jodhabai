@@ -166,18 +166,16 @@
 }
 
 /* ---- Accreditation badges ----
-   These badges have their own built-in whitespace border, so a
-   fairly aggressive negative margin still looks properly spaced
-   while clawing back height from the fixed desktop footer's tight
-   100vh budget (see .site-footer comment) -- worth watching if the
-   legal row/logo below ever start clipping again on shorter
-   viewports now these are 4x bigger. */
+   Fixed desktop footer is a tight 100vh box (see .site-footer
+   comment) -- worth watching if the legal row/logo below ever start
+   clipping again on shorter viewports now these are 4x bigger and
+   have real padding around them. */
 .site-footer__accreditation {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
-  margin: -40px 0;
+  padding: 32px 0;
 }
 
 .site-footer__accreditation img {
