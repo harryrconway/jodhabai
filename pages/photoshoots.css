@@ -116,7 +116,7 @@
 
 .ev-hero__lede {
   font-family: var(--serif);
-  font-weight: 700;
+  font-weight: 400;
   font-size: clamp(36px, 3.2vw, 46px);
   line-height: 1.6;
   color: rgba(243, 237, 225, 0.85);
@@ -160,7 +160,7 @@
 
 .ps-intro__lede {
   font-family: var(--serif);
-  font-weight: 700;
+  font-weight: 400;
   font-size: clamp(20px, 2vw, 28px);
   line-height: 1.55;
   color: var(--ink);
@@ -257,7 +257,7 @@
 .ps-option__inc li {
   font-family: var(--sans);
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.5;
   color: var(--muted);
   padding-left: 14px;
@@ -274,7 +274,7 @@
 .ps-tier__multiday {
   margin: 20px 0 0;
   font-family: var(--serif);
-  font-weight: 700;
+  font-weight: 400;
   font-style: italic;
   font-size: 32px;
   line-height: 1.5;
@@ -285,7 +285,7 @@
 
 .ps-tier--quote .ps-tier__quote-text {
   font-family: var(--serif);
-  font-weight: 700;
+  font-weight: 400;
   font-size: clamp(18px, 1.7vw, 23px);
   line-height: 1.6;
   color: var(--muted);
@@ -394,7 +394,7 @@
 
 .ps-productions__lede {
   font-family: var(--serif);
-  font-weight: 700;
+  font-weight: 400;
   font-size: clamp(21px, 2.3vw, 27px);
   color: var(--ink);
   max-width: 560px;
@@ -493,7 +493,7 @@
 
 .ev-cta__lede {
   font-family: var(--serif);
-  font-weight: 700;
+  font-weight: 400;
   font-size: clamp(18px, 1.5vw, 21px);
   line-height: 1.6;
   color: var(--muted);

@@ -240,7 +240,7 @@
 .intro__google-text {
   font-family: var(--sans);
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
@@ -324,7 +324,7 @@
 .about-estate__lede {
   font-family: var(--sans);
   font-size: 36px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.75;
   color: var(--muted);
   max-width: 56ch;
@@ -635,7 +635,7 @@
 .zoom-mosaic__badge-rating {
   font-family: var(--sans);
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 400;
   color: var(--ink);
   line-height: 1;
 }
@@ -966,7 +966,7 @@
 
 .occasions__lede {
   font-family: var(--serif);
-  font-weight: 700;
+  font-weight: 400;
   font-size: clamp(36px, 3.2vw, 44px);
   line-height: 1.55;
   color: var(--muted);
