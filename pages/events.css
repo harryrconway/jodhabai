@@ -102,6 +102,7 @@
 }
 
 .ev-hero__lede {
+  display: inline-block;
   font-family: var(--serif);
   font-weight: 700;
   font-size: clamp(18px, 1.6vw, 23px);
@@ -109,6 +110,9 @@
   color: rgba(243, 237, 225, 0.85);
   max-width: 54ch;
   margin: 0;
+  background: rgba(20, 21, 15, 0.4);
+  padding: 14px 20px;
+  border-radius: 14px;
 }
 
 /* =========================================================
