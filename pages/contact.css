@@ -785,8 +785,22 @@ a.contact__detail:hover .contact__detail-value {
 
   .contact__details {
     flex-direction: column;
+    align-items: center;
     gap: 24px;
     margin-bottom: 48px;
+  }
+
+  /* Undo the tablet breakpoint's left-align (960px, row-wrap layout)
+     -- true mobile stacks as a single centred column again, so each
+     detail's label/value need to be centred within it too, not left
+     stuck against the (centred) block's own edge. */
+  .contact__detail {
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact__detail--social .contact__social {
+    justify-content: center;
   }
 
   /* Mobile inputs: bordered boxes for clear tap targets */
