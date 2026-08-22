@@ -45,12 +45,12 @@
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
-  padding: 40px 40px 3vh;
+  padding: 32px 40px 2.5vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
-  gap: 32px;
+  gap: 24px;
 }
 
 .site-footer__top {
@@ -71,7 +71,7 @@
   grid-template-columns: 2fr 1fr 1fr 1.4fr;
   gap: 40px;
   width: 100%;
-  padding-top: 28px;
+  padding-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
@@ -167,15 +167,15 @@
 
 /* ---- Accreditation badges ----
    Fixed desktop footer is a tight 100vh box (see .site-footer
-   comment) -- worth watching if the legal row/logo below ever start
-   clipping again on shorter viewports now these are 4x bigger and
-   have real padding around them. */
+   comment) -- these badges being 4x bigger is what pushed the legal
+   row/logo below out of view once already. Padding kept modest
+   (not the 32px first tried) to leave room for that. */
 .site-footer__accreditation {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
-  padding: 32px 0;
+  padding: 16px 0;
 }
 
 .site-footer__accreditation img {
@@ -190,8 +190,8 @@
   align-items: center;
   justify-content: center;
   gap: 14px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 14px;
+  padding-bottom: 14px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   font-family: var(--sans);
   font-size: 22px;
