@@ -10,8 +10,12 @@
 .ct-hero {
   position: relative;
   z-index: 2;
-  height: 62vh;
-  min-height: 460px;
+  /* min-height, not height: a fixed height + overflow:hidden silently
+     clips the badge/title/lede whenever their combined content is
+     taller than the viewport (long lede copy, narrow/short screens).
+     min-height keeps the full-bleed look for normal content while
+     letting the section grow instead of clipping when it doesn't fit. */
+  min-height: max(460px, 62vh);
   background: var(--cream);
   padding: 28px;
 }
@@ -19,13 +23,26 @@
 .ct-hero__frame {
   position: relative;
   width: 100%;
-  height: 100%;
+  min-height: calc(max(460px, 62vh) - 56px);
   border-radius: 25px;
-  overflow: hidden;
   isolation: isolate;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  /* Grid, not flex: stacks __visual and __content in the same cell so
+     the frame's height is driven by whichever is taller (usually
+     __visual's min-height floor, but __content wins and grows the
+     frame if its text ever needs more room). Nothing here clips. */
+  display: grid;
+}
+
+/* Image/darken/overlay layer — this is the ONLY part that clips to
+   the rounded corners. Kept separate from __content so long text can
+   never be hidden by the image frame's own overflow:hidden. */
+.ct-hero__visual {
+  grid-row: 1;
+  grid-column: 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: inherit;
+  isolation: isolate;
 }
 
 .ct-hero__img {
@@ -66,6 +83,9 @@
 }
 
 .ct-hero__content {
+  grid-row: 1;
+  grid-column: 1;
+  align-self: end;
   position: relative;
   z-index: 2;
   padding: 0 8vw 8vh;
@@ -746,11 +766,15 @@ a.contact__detail:hover .contact__detail-value {
 @media (max-width: 720px) {
   .ct-hero {
     padding: 14px;
-    height: auto;
     min-height: 0;
     aspect-ratio: 3 / 4;
   }
-  .ct-hero__frame { border-radius: 20px; }
+  .ct-hero__frame {
+    border-radius: 20px;
+    /* Floor matches the aspect-ratio box; grid lets it grow taller
+       than this if __content's text needs more room than that. */
+    min-height: calc((100vw - 28px) * 4 / 3);
+  }
   .ct-hero__content { padding: 0 24px 48px; }
   .ct-hero__title { font-size: clamp(38px, 12vw, 56px); }
   .ct-hero__lede { font-size: 15px; }

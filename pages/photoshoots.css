@@ -4,8 +4,12 @@
 .ev-hero {
   position: relative;
   z-index: 2;
-  height: 100vh;
-  min-height: 640px;
+  /* min-height, not height: a fixed height + overflow:hidden silently
+     clips the badge/title/lede whenever their combined content is
+     taller than the viewport (long lede copy, narrow/short screens).
+     min-height keeps the full-bleed look for normal content while
+     letting the section grow instead of clipping when it doesn't fit. */
+  min-height: max(640px, 100vh);
   background: var(--cream);
   padding: 28px;
   transition: padding-left 0.12s linear, padding-right 0.12s linear;
@@ -14,13 +18,26 @@
 .ev-hero__frame {
   position: relative;
   width: 100%;
-  height: 100%;
+  min-height: calc(max(640px, 100vh) - 56px);
   border-radius: 25px;
-  overflow: hidden;
   isolation: isolate;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  /* Grid, not flex: stacks __visual and __content in the same cell so
+     the frame's height is driven by whichever is taller (usually
+     __visual's min-height floor, but __content wins and grows the
+     frame if its text ever needs more room). Nothing here clips. */
+  display: grid;
+}
+
+/* Image/darken/overlay layer — this is the ONLY part that clips to
+   the rounded corners. Kept separate from __content so long text can
+   never be hidden by the image frame's own overflow:hidden. */
+.ev-hero__visual {
+  grid-row: 1;
+  grid-column: 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: inherit;
+  isolation: isolate;
 }
 
 .ev-hero__img {
@@ -83,6 +100,9 @@
 }
 
 .ev-hero__content {
+  grid-row: 1;
+  grid-column: 1;
+  align-self: end;
   position: relative;
   z-index: 2;
   padding: 0 8vw 10vh;
@@ -531,10 +551,14 @@
   .ev-hero {
     padding: 14px;
     min-height: 0;
-    height: auto;
     aspect-ratio: 1 / 1;
   }
-  .ev-hero__frame { border-radius: 20px; }
+  .ev-hero__frame {
+    border-radius: 20px;
+    /* Floor matches the aspect-ratio square; grid lets it grow taller
+       than this if __content's text needs more room than that. */
+    min-height: calc(100vw - 28px);
+  }
   .ev-hero__content { padding: 0 24px 72px; }
   .ev-hero__title { font-size: clamp(42px, 13vw, 64px); }
   .ev-hero__lede { font-size: 16px; }
