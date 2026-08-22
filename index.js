@@ -166,6 +166,24 @@
 })();
 
 /* ------------------------------------------------------------------
+   Hero slideshow — crossfades between the .hero__bg images stacked
+   in the frame. Advances on a timer, looping back to the first.
+   ------------------------------------------------------------------ */
+(function heroSlideshow() {
+  const slides = document.querySelectorAll(".hero__bg");
+  if (slides.length < 2) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  let current = 0;
+  setInterval(function () {
+    const next = (current + 1) % slides.length;
+    slides[current].classList.remove("is-active");
+    slides[next].classList.add("is-active");
+    current = next;
+  }, 6000);
+})();
+
+/* ------------------------------------------------------------------
    Single rAF scroll loop:
    - Hero: side compression + black darkening
    - Intro: sentence-by-sentence reveal as the section enters view
