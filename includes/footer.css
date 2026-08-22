@@ -25,6 +25,13 @@
   align-items: stretch;
   justify-content: center;
   overflow: hidden;
+  /* Safety net: the footer's fixed 100vh height + overflow:hidden
+     means any content taller than the viewport gets silently
+     clipped -- this is exactly what happened to the legal row/logo
+     (the last two items in the flex column) once footer text sizes
+     grew. .site-footer__inner below gets its own scroll instead, so
+     content is squeezed rather than ever truly hidden regardless of
+     future size/viewport changes. */
   /* No pointer-events: none here — cream sections (z-index: 2) sit above the
      footer (z-index: 1) so they naturally intercept scroll and click events
      while they're in the viewport. Blocking pointer events on the footer shell
@@ -36,12 +43,17 @@
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
-  padding: 56px 40px 4vh;
+  padding: 40px 40px 3vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
-  gap: 48px;
+  gap: 32px;
+  /* Scroll internally rather than clip if content (legal row, brand
+     mark) doesn't fit in 100vh -- see .site-footer comment above. */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
 }
 
 .site-footer__top {
@@ -60,9 +72,9 @@
 .site-footer__cols {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1.4fr;
-  gap: 56px;
+  gap: 40px;
   width: 100%;
-  padding-top: 36px;
+  padding-top: 28px;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
@@ -157,8 +169,8 @@
   align-items: center;
   justify-content: center;
   gap: 14px;
-  padding-top: 24px;
-  padding-bottom: 32px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   font-family: var(--sans);
   font-size: 22px;
@@ -485,7 +497,7 @@
 /* ---- Massive brand mark — pinned at the very bottom, one line ---- */
 .site-footer__brand {
   display: block;
-  width: clamp(280px, 46vw, 760px);
+  width: clamp(220px, 34vw, 560px);
   height: auto;
   margin: 0 auto;
   /* Gentle parallax: the brand drifts up a touch as it's revealed,
