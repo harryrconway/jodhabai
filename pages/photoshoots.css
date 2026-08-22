@@ -569,6 +569,10 @@
 
   .ps-intro { padding: 72px 20px 0; }
   .ps-tiers { padding: 56px 20px 24px; }
+  .ps-tier__cat { font-size: clamp(22px, 7vw, 28px); }
+  .ps-tier__cap { font-size: 13px; }
+  .ps-option__inc li { font-size: 16px; }
+  .ps-tier__multiday { font-size: 15px; }
   .ps-productions { padding: 16px 20px 40px; }
   .ps-gallery { padding: 56px 20px 40px; }
 

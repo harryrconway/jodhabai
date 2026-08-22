@@ -113,6 +113,12 @@
 .footer-col__list a {
   position: relative;
   display: inline-block;
+  max-width: 100%;
+  /* The email address has no spaces to wrap at by default, so on a
+     narrow mobile column it was running past the edge instead of
+     wrapping to a second line. */
+  overflow-wrap: break-word;
+  word-break: break-word;
   color: inherit;
   transition: color 0.3s var(--ease), transform 0.3s var(--ease);
 }
@@ -478,6 +484,16 @@
 
   .legal-modal__body {
     padding: 24px 20px 40px;
+  }
+
+  .legal-modal__text {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .legal-modal__list li {
+    font-size: 15px;
+    line-height: 1.55;
   }
 
   .legal-modal__tabs {

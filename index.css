@@ -1274,6 +1274,17 @@
        against the gallery / mosaic below on mobile. */
     padding: 28px 22px 0;
   }
+  .intro__google {
+    gap: 10px;
+    margin-top: 32px;
+  }
+  .intro__google-stars {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+  .intro__google-text {
+    font-size: 12px;
+  }
   .gallery {
     /* Top padding zeroed so it butts directly up against the intro
        signoff — no empty cream gap between the two. */
@@ -1337,6 +1348,10 @@
   .occasions__explainer {
     text-align: left;
   }
+  .occasions__lede {
+    font-size: 20px;
+    line-height: 1.5;
+  }
   .occasion {
     grid-template-columns: 1fr;
     gap: 14px;
@@ -1385,6 +1400,10 @@
 
   .about-estate {
     padding: 8px 20px 80px;
+  }
+  .about-estate__lede {
+    font-size: 18px;
+    line-height: 1.6;
   }
 }
 
