@@ -40,7 +40,12 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  /* contain, not cover: shows the whole photo instead of cropping it
+     to fill the box. background fills whatever letterboxing that
+     leaves (the box's fixed aspect ratio rarely matches the image's
+     own), matching the dark overlay drawn on top of it. */
+  object-fit: contain;
+  background: #000;
   object-position: center;
   z-index: 0;
   transform: scale(1.04);
