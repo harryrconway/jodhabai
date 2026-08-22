@@ -50,12 +50,7 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  /* contain, not cover: shows the whole photo instead of cropping it
-     to fill the box. background fills whatever letterboxing that
-     leaves (the box's fixed aspect ratio rarely matches the image's
-     own), matching the dark overlay drawn on top of it. */
-  object-fit: contain;
-  background: #000;
+  object-fit: cover;
   object-position: center;
   z-index: 0;
   transform: scale(1.04);
@@ -779,13 +774,6 @@ a.contact__detail:hover .contact__detail-value {
     /* Floor matches the aspect-ratio box; grid lets it grow taller
        than this if __content's text needs more room than that. */
     min-height: calc((100vw - 28px) * 4 / 3);
-  }
-  /* Mobile's tall 3:4 box shrank a contained landscape photo down to
-     a small strip with heavy black letterboxing -- back to filling
-     the frame here, cropped, like before. */
-  .ct-hero__img {
-    object-fit: cover;
-    background: none;
   }
   .ct-hero__content { padding: 0 24px 48px; }
   .ct-hero__title { font-size: clamp(38px, 12vw, 56px); }
