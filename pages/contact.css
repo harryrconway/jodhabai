@@ -780,6 +780,13 @@ a.contact__detail:hover .contact__detail-value {
        than this if __content's text needs more room than that. */
     min-height: calc((100vw - 28px) * 4 / 3);
   }
+  /* Mobile's tall 3:4 box shrank a contained landscape photo down to
+     a small strip with heavy black letterboxing -- back to filling
+     the frame here, cropped, like before. */
+  .ct-hero__img {
+    object-fit: cover;
+    background: none;
+  }
   .ct-hero__content { padding: 0 24px 48px; }
   .ct-hero__title { font-size: clamp(38px, 12vw, 56px); }
   .ct-hero__lede { font-size: 15px; }
