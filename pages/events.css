@@ -776,8 +776,7 @@
     margin-bottom: 14px;
   }
   .ev-hero__lede {
-    font-size: 13px;
-    padding: 10px 14px;
+    display: none;
   }
 
   .ev-chapters {
