@@ -234,7 +234,7 @@ a.contact__detail:hover .contact__detail-value {
   font-family: var(--serif);
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(18px, 1.7vw, 21px);
+  font-size: clamp(14px, 1.2vw, 16px);
   color: var(--muted);
   transition: color 0.3s ease;
   pointer-events: none;
@@ -250,7 +250,7 @@ a.contact__detail:hover .contact__detail-value {
   width: 100%;
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(22px, 2.2vw, 27px);
+  font-size: clamp(17px, 1.5vw, 19px);
   line-height: 1.3;
   color: var(--ink);
   background: transparent;
@@ -337,7 +337,7 @@ a.contact__detail:hover .contact__detail-value {
 .cf-select__val {
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(22px, 2.2vw, 27px);
+  font-size: clamp(17px, 1.5vw, 19px);
   line-height: 1.3;
   color: var(--ink);
 }
@@ -442,7 +442,7 @@ a.contact__detail:hover .contact__detail-value {
   font-family: var(--serif);
   font-weight: 400;
   font-style: italic;
-  font-size: clamp(19px, 1.8vw, 23px);
+  font-size: clamp(16px, 1.4vw, 18px);
   line-height: 1.2;
   color: var(--ink);
   transition: color 0.22s ease;
@@ -476,7 +476,7 @@ a.contact__detail:hover .contact__detail-value {
   font-family: var(--serif);
   font-style: italic;
   font-weight: 300;
-  font-size: clamp(18px, 1.6vw, 22px);
+  font-size: clamp(16px, 1.4vw, 18px);
   cursor: pointer;
   white-space: nowrap;
   box-shadow: 0 10px 28px -12px rgba(0, 0, 0, 0.5);
