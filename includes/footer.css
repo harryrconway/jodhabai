@@ -566,8 +566,18 @@
     padding-top: 28px;
   }
 
-  .footer-col--lede {
+  .footer-col--lede,
+  .footer-col--accreditation {
     grid-column: 1 / -1;
+  }
+
+  /* No height budget to protect once the footer is static/auto-height
+     here, and the accreditation column no longer sits beside "Reach
+     out" once it wraps into its own row in this 2-column grid -- lay
+     the two badges out side by side (full width, so they have room
+     to breathe) instead of stacked in a half-width column. */
+  .site-footer__accreditation {
+    flex-direction: row;
   }
 
   /* Brand: JS drives translateY for the parallax — no override here */
