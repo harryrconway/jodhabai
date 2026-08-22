@@ -568,6 +568,13 @@
        than this if __content's text needs more room than that. */
     min-height: calc(100vw - 28px);
   }
+  /* Mobile's square box shrank each contained triptych photo down to
+     a sliver with heavy black letterboxing -- back to filling each
+     third of the frame here, cropped, like before. */
+  .ev-hero__img {
+    object-fit: cover;
+    background: none;
+  }
   .ev-hero__content { padding: 0 20px 40px; }
   .ev-hero__badge { font-size: 12px; margin-bottom: 14px; }
   .ev-hero__title { font-size: clamp(24px, 8vw, 36px); margin-bottom: 14px; }

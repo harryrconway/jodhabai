@@ -775,6 +775,14 @@
     min-height: calc(100vw - 28px);
   }
 
+  /* Mobile's square box shrank a contained landscape photo down to a
+     small strip with heavy black letterboxing -- back to filling
+     the frame here, cropped, like before. */
+  .story-hero__img {
+    object-fit: cover;
+    background: none;
+  }
+
   .story-hero__content {
     padding: 0 24px 72px;
   }
