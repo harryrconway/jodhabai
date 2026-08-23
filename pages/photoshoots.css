@@ -179,6 +179,7 @@
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--accent);
+  margin-top: 0;
   margin-bottom: 28px;
 }
 
@@ -235,6 +236,7 @@
   line-height: 1.1;
   letter-spacing: -0.01em;
   color: var(--ink);
+  margin-top: 0;
   margin-bottom: 8px;
 }
 
@@ -353,6 +355,7 @@
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--accent);
+  margin-top: 0;
   margin-bottom: 36px;
 }
 
@@ -413,6 +416,7 @@
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--accent);
+  margin-top: 0;
   margin-bottom: 14px;
 }
 
