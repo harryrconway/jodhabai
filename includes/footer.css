@@ -578,6 +578,7 @@
      to breathe) instead of stacked in a half-width column. */
   .site-footer__accreditation {
     flex-direction: row;
+    justify-content: center;
   }
 
   /* Brand: JS drives translateY for the parallax — no override here */
