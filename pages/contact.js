@@ -2,16 +2,9 @@
 
 (function () {
 
-  /* ============================================================
-     FORM ENDPOINT — ⚠ FINAL SETUP STEP, currently in demo mode.
-     1. Create a free form at https://formspree.io (or web3forms.com)
-        using venue@jodhabaiestate.com
-     2. Paste the endpoint URL between the quotes below, e.g.
-        var FORM_ENDPOINT = "https://formspree.io/f/abcdwxyz";
-     While this is empty, submissions show the thank-you screen but
-     DO NOT send anywhere — enquiries are lost.
-     ============================================================ */
-  var FORM_ENDPOINT = "";
+  /* Form submissions go to venue@jodhabaiestate.com via Web3Forms. */
+  var FORM_ENDPOINT = "https://api.web3forms.com/submit";
+  var FORM_ACCESS_KEY = "cbae5594-f329-4d3b-b742-1fca6d06a858";
 
   /* ---- Staggered entrance animation on page load ---- */
   var items = document.querySelectorAll('[data-animate]');
@@ -176,21 +169,16 @@
     submitBtn.classList.add('is-sending');
     submitBtn.disabled = true;
 
+    var topic = sanitize(form.elements['topic'] ? form.elements['topic'].value : '', 100);
+
     var payload = {
+      access_key: FORM_ACCESS_KEY,
+      subject: 'New enquiry from jodhabaiestate.com' + (topic ? ' — ' + topic : ''),
       name: name,
       email: email,
-      topic: sanitize(form.elements['topic'] ? form.elements['topic'].value : '', 100),
+      topic: topic,
       message: message
     };
-
-    if (!FORM_ENDPOINT) {
-      /* Demo mode — no endpoint configured yet (see FORM_ENDPOINT above) */
-      setTimeout(function () {
-        showThanks();
-        form.reset();
-      }, 700);
-      return;
-    }
 
     fetch(FORM_ENDPOINT, {
       method: 'POST',
