@@ -208,7 +208,7 @@
       if (timerEl) timerEl.textContent = Math.max(count, 0);
       if (count <= 0) {
         clearInterval(interval);
-        window.location.href = '../index.html';
+        window.location.href = '/';
       }
     }, 1000);
   }
