@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#f3ede1" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <title>Jodha Bai Estate</title>
+  <style>
+    :root {
+      --cream: #f3ede1;
+      --ink: #1c1d1a;
+      --muted: #524d42;
+      --accent: #8a6f4f;
+      --ease: cubic-bezier(0.65, 0.05, 0.35, 1);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: Arial, Helvetica, system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      padding: 32px;
+    }
+
+    .pause {
+      max-width: 560px;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(14px);
+      animation: reveal 1.1s var(--ease) forwards;
+      animation-delay: 0.15s;
+    }
+
+    .pause__mark {
+      display: inline-block;
+      font-size: 28px;
+      color: var(--accent);
+      margin-bottom: 28px;
+      animation: breathe 4.5s ease-in-out infinite;
+    }
+
+    .pause__title {
+      margin: 0 0 20px;
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+    }
+
+    .pause__body {
+      margin: 0 0 32px;
+      font-size: clamp(17px, 2vw, 19px);
+      line-height: 1.65;
+      color: var(--muted);
+    }
+
+    .pause__contact {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(28, 29, 26, 0.25);
+      padding-bottom: 3px;
+      transition: border-color 0.3s var(--ease), color 0.3s var(--ease);
+    }
+
+    .pause__contact:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    @keyframes reveal {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes breathe {
+      0%, 100% { opacity: 0.55; transform: scale(1); }
+      50%      { opacity: 1;    transform: scale(1.12); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .pause { animation: none; opacity: 1; transform: none; }
+      .pause__mark { animation: none; opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="pause">
+    <span class="pause__mark" aria-hidden="true">&#10038;</span>
+    <h1 class="pause__title">We&rsquo;re taking a short pause.</h1>
+    <p class="pause__body">Jodha Bai Estate is temporarily closed for enquiries while we finalise a few details behind the scenes. We&rsquo;ll be back shortly.</p>
+    <a class="pause__contact" href="mailto:venue@jodhabaiestate.com">For anything urgent, reach us at venue@jodhabaiestate.com</a>
+  </div>
+</body>
+</html>
