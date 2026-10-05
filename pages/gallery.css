@@ -1,7 +1,7 @@
 /* =========================================================
-   Gallery page — 3-column grid of vertical rectangles.
-   Cells fade in one-by-one left-to-right, top-to-bottom as
-   the user scrolls through the section.
+   Gallery page — four themed carousels (shared component from
+   includes/carousel.css), each a curated selection rather than
+   a flat grid of every available photo.
    Builds on tokens from ../index.css and page.css.
    ========================================================= */
 
@@ -23,25 +23,8 @@
   box-shadow: 0 60px 80px -50px rgba(0, 0, 0, 0.5);
 }
 
-.snake-gallery__inner {
-  max-width: 1320px;
-  margin: 0 auto 64px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  /* Rows auto-size from each cell's aspect-ratio. */
-  grid-auto-rows: auto;
-  /* Partial small gaps — visible but tight, like a board's seams */
-  column-gap: 12px;
-  row-gap: 16px;
-}
-
-.snake-gallery__inner:last-of-type {
-  margin-bottom: 0;
-}
-
-/* ---- Section labels — Estate / Photo Shoots & Film / Ceremonies &
-   Events. Plain text markers, not part of the reveal system (only
-   .snake-cell is watched by gallery.js). ---- */
+/* ---- Section labels — The Estate & Architecture / Interiors &
+   Suites / Photoshoots & Film / Proposals & Styled Shoots. ---- */
 .snake-gallery__section-title {
   max-width: 1320px;
   margin: 0 auto 28px;
@@ -59,69 +42,11 @@
   border-top: 1px solid var(--line);
 }
 
-/* =========================================================
-   CELL — vertical rectangle with reveal state
-   ========================================================= */
-.snake-cell {
-  position: relative;
-  margin: 0;
-  overflow: hidden;
-  /* Skip layout/paint work for offscreen cells — big win once the
-     grid holds 20+ full-size photos. aspect-ratio keeps the box
-     sized correctly while contents are unrendered. */
-  content-visibility: auto;
-  background: #1a1a16;
-  border-radius: 16px;
-  /* Vertical rectangle — bigger now that we're at 3 cols */
-  aspect-ratio: 3 / 4;
-
-  /* Initial state — JS toggles .is-visible based on scroll position.
-     Cells rise in slightly out of focus and resolve sharp, like a
-     photograph settling into a print. */
-  opacity: 0;
-  transform: translateY(28px) scale(0.94);
-  filter: blur(14px);
-  transition:
-    opacity 0.5s var(--ease),
-    transform 0.6s var(--ease),
-    filter 0.7s var(--ease),
-    box-shadow 0.6s var(--ease);
-  will-change: transform, opacity, filter;
-}
-
-.snake-cell.is-visible {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  filter: blur(0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .snake-cell {
-    opacity: 1;
-    transform: none;
-    filter: none;
-    transition: none;
-  }
-}
-
-.snake-cell:hover {
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7);
-  z-index: 4;
-}
-
-.snake-cell img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: scale(1.04);
-  transition: transform 0.8s var(--ease);
-  will-change: transform;
-}
-
-.snake-cell:hover img {
-  transform: scale(1.10);
+/* ---- Carousel wrapper — centres each themed carousel at the
+   same max-width the old grid used. ---- */
+.gal-carousel-wrap {
+  max-width: 1320px;
+  margin: 0 auto;
 }
 
 /* =========================================================
@@ -151,36 +76,21 @@
 }
 
 /* =========================================================
-   RESPONSIVE — tablet (≤1024px): keep 3 cols, tighten gaps
+   RESPONSIVE — tablet (≤1024px)
    ========================================================= */
 @media (max-width: 1024px) {
   .snake-gallery {
     padding: 28px 20px 88px;
   }
-
-  .snake-gallery__inner {
-    column-gap: 10px;
-    row-gap: 12px;
-  }
 }
 
 /* =========================================================
-   RESPONSIVE — mobile (≤720px): 2-column grid
+   RESPONSIVE — mobile (≤720px)
    ========================================================= */
 @media (max-width: 720px) {
   .snake-gallery {
     padding: 22px 14px 72px;
     border-radius: 0 0 28px 28px;
-  }
-
-  .snake-gallery__inner {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 8px;
-    row-gap: 10px;
-  }
-
-  .snake-cell {
-    border-radius: 12px;
   }
 
   .snake-closing {

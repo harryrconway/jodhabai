@@ -74,8 +74,8 @@
 .page-hero__lede {
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(36px, 3vw, 44px);
-  line-height: 1.62;
+  font-size: clamp(16px, 1.1vw, 19px);
+  line-height: 1.65;
   color: var(--ink-soft);
   margin: 0;
   max-width: 58ch;
