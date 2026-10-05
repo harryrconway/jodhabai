@@ -252,7 +252,6 @@
   font-family: var(--sans);
   font-size: var(--body-size);
   font-weight: 500;
-  letter-spacing: 0.14em;
   color: var(--ink);
   transition: gap 0.35s var(--ease);
 }
@@ -324,7 +323,6 @@
   font-family: var(--sans);
   font-size: var(--body-size);
   font-weight: 500;
-  letter-spacing: 0.32em;
   color: var(--muted);
   margin-bottom: 18px;
 }
@@ -397,7 +395,6 @@
   display: block;
   font-size: var(--body-size);
   font-weight: 500;
-  letter-spacing: 0.24em;
   color: var(--accent);
   margin-bottom: 10px;
 }
@@ -444,7 +441,6 @@
   font-family: var(--sans);
   font-size: var(--body-size);
   font-weight: 500;
-  letter-spacing: 0.32em;
   color: var(--muted);
   margin-bottom: 18px;
 }
@@ -569,7 +565,6 @@
   font-family: var(--sans);
   font-size: var(--body-size);
   font-weight: 500;
-  letter-spacing: 0.28em;
   color: var(--accent);
   margin-bottom: 36px;
 }
@@ -651,7 +646,6 @@
   display: inline-block;
   font-family: var(--sans);
   font-size: var(--body-size);
-  letter-spacing: 0.28em;
   color: var(--muted);
   margin-bottom: 28px;
 }
@@ -757,7 +751,6 @@
   }
 
   .ev-proposal__tag {
-    letter-spacing: 0.22em;
   }
   .ev-proposal__lede {
     max-width: 100%;

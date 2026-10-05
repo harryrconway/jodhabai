@@ -55,7 +55,6 @@
   justify-content: space-between;
   font-family: var(--sans);
   font-size: var(--body-size);
-  letter-spacing: 0.22em;
   color: rgba(255, 255, 255, 0.78);
 }
 
@@ -94,7 +93,6 @@
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   font-family: var(--sans);
   font-size: var(--body-size);
-  letter-spacing: 0.2em;
   color: rgba(255, 255, 255, 0.45);
 }
 
@@ -206,7 +204,6 @@
   font-family: var(--sans);
   font-size: var(--body-size);
   font-weight: 500;
-  letter-spacing: 0.1em;
   color: rgba(255, 255, 255, 0.7);
   padding: 20px 12px 18px;
   transition: color 0.25s var(--ease);
@@ -323,7 +320,6 @@
   font-family: var(--sans);
   font-weight: 600;
   font-size: var(--body-size);
-  letter-spacing: 0.14em;
   color: rgba(255, 255, 255, 0.95);
   margin: 28px 0 10px;
 }
@@ -421,7 +417,6 @@
 
   .legal-modal__tab {
     padding: 18px 12px 16px;
-    letter-spacing: 0.16em;
   }
 }
 
@@ -491,7 +486,6 @@
   }
 
   .site-footer__top {
-    letter-spacing: 0.18em;
   }
 
   .site-footer__cols {
@@ -502,7 +496,6 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    letter-spacing: 0.18em;
     padding-top: 18px;
     padding-bottom: 0;
   }

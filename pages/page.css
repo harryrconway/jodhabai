@@ -33,7 +33,6 @@
   font-style: italic;
   font-weight: 400;
   font-size: var(--body-size);
-  letter-spacing: 0.06em;
   color: var(--muted);
   white-space: nowrap;
 }
@@ -49,7 +48,6 @@
   font-family: var(--sans);
   font-size: var(--body-size);
   font-weight: 500;
-  letter-spacing: 0.28em;
   color: var(--muted);
   white-space: nowrap;
 }

@@ -97,7 +97,6 @@
   font-family: var(--sans);
   font-size: var(--body-size);
   font-weight: 400;
-  letter-spacing: 0.18em;
   text-shadow: 0 2px 22px rgba(0, 0, 0, 0.45);
   line-height: 1;
 }
@@ -257,7 +256,6 @@
   font-family: var(--sans);
   font-size: var(--body-size);
   font-weight: 500;
-  letter-spacing: 0.32em;
   color: var(--muted);
   margin-bottom: 20px;
 }
@@ -300,7 +298,6 @@
   font-family: var(--sans);
   font-size: var(--body-size);
   font-weight: 500;
-  letter-spacing: 0.14em;
   color: var(--ink);
   text-decoration: none;
 }
@@ -355,7 +352,6 @@
   font-family: var(--sans);
   font-weight: 700;
   font-size: var(--body-size);
-  letter-spacing: 0.01em;
   color: var(--accent);
   margin-bottom: 8px;
 }
@@ -365,7 +361,6 @@
   font-family: var(--sans);
   font-size: var(--body-size);
   font-weight: 600;
-  letter-spacing: 0.01em;
   color: var(--ink);
   margin-bottom: 6px;
 }
@@ -808,7 +803,6 @@
   font-family: var(--sans);
   font-size: var(--body-size);
   font-weight: 500;
-  letter-spacing: 0.32em;
   color: var(--muted);
 }
 
@@ -1013,7 +1007,6 @@
   font-family: var(--sans);
   font-size: var(--body-size);
   font-weight: 500;
-  letter-spacing: 0.24em;
   color: var(--ink);
 }
 
@@ -1109,7 +1102,6 @@
     left: 16px;
     bottom: 32px;
     gap: 10px;
-    letter-spacing: 0.12em;
   }
   .hero__locale-dot {
     width: 8px;
@@ -1272,7 +1264,6 @@
   font-family: var(--sans);
   font-size: var(--body-size);
   font-weight: 400;
-  letter-spacing: 0.3em;
   color: rgba(243, 237, 225, 0.75);
 }
 
