@@ -133,8 +133,8 @@
 .intro__paragraph {
   font-family: var(--sans);
   font-weight: 400;
-  font-size: var(--body-size);
-  line-height: 1.6;
+  font-size: var(--title-size);
+  line-height: 1.5;
   letter-spacing: 0;
   color: var(--ink);
   margin: 0;
@@ -175,7 +175,7 @@
   margin-bottom: 32px;
   font-family: var(--sans);
   font-weight: 400;
-  font-size: var(--body-size);
+  font-size: var(--title-size);
   letter-spacing: 0;
   color: var(--ink);
 }
@@ -200,13 +200,13 @@
   margin-top: 36px;
   font-family: var(--sans);
   font-weight: 400;
-  font-size: var(--body-size);
+  font-size: var(--title-size);
   letter-spacing: 0;
   color: rgba(15, 15, 13, 0.62);
 }
 
 .intro__sign-mark {
-  font-size: var(--body-size);
+  font-size: var(--title-size);
   line-height: 1;
   display: inline-block;
   transform: translateY(-1px);
