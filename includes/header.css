@@ -371,28 +371,6 @@
   padding-right: 18px;
 }
 
-.menu-foot {
-  font-weight: 400;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(243, 237, 225, 0.1);
-  font-size: var(--body-size);
-  line-height: 1.6;
-  color: rgba(243, 237, 225, 0.75);
-}
-
-.menu-foot a:hover { color: var(--cream); }
-
-.menu-foot__label {
-  display: block;
-  font-size: var(--body-size);
-  letter-spacing: 0.22em;
-  color: rgba(243, 237, 225, 0.75);
-  margin-bottom: 10px;
-}
-
 /* Stagger fade-in of menu links when overlay opens */
 .menu-overlay .menu-list li {
   opacity: 0;
@@ -409,16 +387,6 @@
 .menu-overlay.is-open .menu-list li:nth-child(4) { transition-delay: 0.42s; }
 .menu-overlay.is-open .menu-list li:nth-child(5) { transition-delay: 0.50s; }
 .menu-overlay.is-open .menu-list li:nth-child(6) { transition-delay: 0.58s; }
-
-.menu-overlay .menu-foot {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s var(--ease) 0.55s, transform 0.6s var(--ease) 0.55s;
-}
-.menu-overlay.is-open .menu-foot {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 body.menu-open {
   overflow: hidden;
@@ -441,9 +409,7 @@ body.menu-open {
   }
   /* On mobile the list hugs its own content instead of stretching to
      fill all remaining height, and centres in whatever vertical space
-     is left below the bar (.menu-foot is hidden on mobile — see
-     below — so the six links no longer have to share the screen with
-     it and risk needing a scroll to reach the last one). */
+     is left below the bar. */
   .menu-list {
     flex: 0 0 auto;
     gap: 0;
@@ -496,14 +462,6 @@ body.menu-open {
   }
   .cta__icon--burger {
     gap: 4px;
-  }
-  /* Find us / Follow / Reach out is dropped from the mobile menu
-     entirely — it's the single biggest block of vertical space here,
-     it's already duplicated in the site footer on every page, and
-     removing it is what lets all six nav links fit on screen without
-     scrolling or shrinking their type. */
-  .menu-foot {
-    display: none;
   }
   .btn {
     padding: 10px 14px;
