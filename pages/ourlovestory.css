@@ -144,7 +144,6 @@
   font-size: var(--body-size);
   font-weight: 500;
   letter-spacing: 0.3em;
-  text-transform: uppercase;
   color: rgba(243, 237, 225, 0.8);
   margin-bottom: 28px;
 }
@@ -170,7 +169,6 @@
   font-size: var(--body-size);
   font-weight: 400;
   letter-spacing: 0.22em;
-  text-transform: uppercase;
   color: rgba(243, 237, 225, 0.95);
   margin: 0;
   background: rgba(20, 21, 15, 0.72);
@@ -190,33 +188,6 @@
   background: rgba(20, 21, 15, 0.72);
   padding: 8px 16px;
   border-radius: 12px;
-}
-
-.story-hero__scroll {
-  position: absolute;
-  bottom: 44px;
-  right: 8vw;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  color: rgba(243, 237, 225, 0.4);
-  font-family: var(--sans);
-  font-size: var(--body-size);
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-}
-
-.story-hero__scroll svg {
-  width: 18px;
-  height: 18px;
-  animation: scrollBounce 2.4s ease-in-out infinite;
-}
-
-@keyframes scrollBounce {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(7px); }
 }
 
 /* =========================================================
@@ -240,7 +211,6 @@
   font-size: var(--body-size);
   font-weight: 500;
   letter-spacing: 0.28em;
-  text-transform: uppercase;
   color: var(--muted);
   margin-bottom: 28px;
 }
@@ -280,7 +250,6 @@
   font-size: var(--body-size);
   font-weight: 500;
   letter-spacing: 0.24em;
-  text-transform: uppercase;
   color: var(--muted);
   transition: color 0.3s ease;
 }
@@ -437,16 +406,6 @@
   margin-bottom: 32px;
 }
 
-.chapter__num {
-  font-family: var(--serif);
-  font-style: italic;
-  font-weight: 400;
-  font-size: var(--body-size);
-  letter-spacing: 0.06em;
-  color: var(--muted);
-  white-space: nowrap;
-}
-
 .chapter__rule {
   flex: 1;
   height: 1px;
@@ -458,7 +417,6 @@
   font-size: var(--body-size);
   font-weight: 500;
   letter-spacing: 0.24em;
-  text-transform: uppercase;
   color: var(--muted);
   white-space: nowrap;
 }
@@ -466,7 +424,7 @@
 .chapter__title {
   font-family: var(--serif);
   font-weight: 300;
-  font-size: var(--title-size);
+  font-size: var(--body-size);
   line-height: 1.1;
   letter-spacing: -0.02em;
   color: var(--ink);
@@ -554,7 +512,6 @@
   border-top-color: rgba(243, 237, 225, 0.12);
 }
 
-.chapter-full--dark .chapter__num,
 .chapter-full--dark .chapter__year {
   color: rgba(243, 237, 225, 0.55);
 }
@@ -625,7 +582,6 @@
   font-size: var(--body-size);
   font-weight: 500;
   letter-spacing: 0.22em;
-  text-transform: uppercase;
   color: var(--muted);
   margin-bottom: 56px;
 }
@@ -659,7 +615,6 @@
   font-size: var(--body-size);
   font-weight: 500;
   letter-spacing: 0.26em;
-  text-transform: uppercase;
   color: var(--muted);
   margin: 0 0 16px;
 }
@@ -774,10 +729,6 @@
 
   .story-hero__content {
     padding: 0 24px 72px;
-  }
-
-  .story-hero__scroll {
-    display: none;
   }
 
   .story-intro {

@@ -109,17 +109,6 @@
   max-width: 1100px;
 }
 
-.ev-hero__badge {
-  display: block;
-  font-family: var(--sans);
-  font-size: var(--body-size);
-  font-weight: 500;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: rgba(243, 237, 225, 0.8);
-  margin-bottom: 28px;
-}
-
 .ev-hero__title {
   font-family: var(--serif);
   font-weight: 300;
@@ -127,25 +116,29 @@
   line-height: 0.95;
   letter-spacing: -0.025em;
   color: var(--cream);
-  margin: 0 0 32px;
+  margin: 0;
 }
 
 .ev-hero__title em {
   font-style: italic;
 }
 
-.ev-hero__lede {
-  display: inline-block;
+/* ---- Hero lede — plain text on cream below the hero photo ---- */
+.ev-hero-lede {
+  position: relative;
+  z-index: 2;
+  background: var(--cream);
+  padding: 64px 56px 0;
+}
+
+.ev-hero-lede__text {
   font-family: var(--serif);
   font-weight: 400;
   font-size: var(--body-size);
   line-height: 1.6;
-  color: rgba(243, 237, 225, 0.95);
-  max-width: 68ch;
-  margin: 0;
-  background: rgba(20, 21, 15, 0.72);
-  padding: 14px 20px;
-  border-radius: 14px;
+  color: var(--ink-soft);
+  max-width: 64ch;
+  margin: 0 auto;
 }
 
 /* =========================================================
@@ -155,7 +148,7 @@
   position: relative;
   z-index: 2;
   background: var(--cream);
-  padding: 110px 56px 0;
+  padding: 60px 56px 0;
 }
 
 .ps-intro__inner {
@@ -177,7 +170,6 @@
   font-size: var(--body-size);
   font-weight: 500;
   letter-spacing: 0.28em;
-  text-transform: uppercase;
   color: var(--accent);
   margin-top: 0;
   margin-bottom: 28px;
@@ -255,7 +247,6 @@
   font-size: var(--body-size);
   font-weight: 400;
   letter-spacing: 0.12em;
-  text-transform: uppercase;
   color: var(--muted);
 }
 
@@ -275,7 +266,6 @@
   font-size: var(--body-size);
   font-weight: 500;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
   color: var(--ink);
   margin-bottom: 14px;
 }
@@ -362,7 +352,6 @@
   font-size: var(--body-size);
   font-weight: 500;
   letter-spacing: 0.28em;
-  text-transform: uppercase;
   color: var(--accent);
   margin-top: 0;
   margin-bottom: 36px;
@@ -394,7 +383,6 @@
   font-size: var(--body-size);
   font-weight: 500;
   letter-spacing: 0.28em;
-  text-transform: uppercase;
   color: var(--accent);
   margin-top: 0;
   margin-bottom: 14px;
@@ -448,7 +436,6 @@
   font-family: var(--sans);
   font-size: var(--body-size);
   letter-spacing: 0.28em;
-  text-transform: uppercase;
   color: var(--muted);
   margin-bottom: 28px;
 }
@@ -456,7 +443,7 @@
 .ev-cta__title {
   font-family: var(--serif);
   font-weight: 300;
-  font-size: var(--title-size);
+  font-size: var(--body-size);
   line-height: 1;
   letter-spacing: -0.02em;
   color: var(--ink);
@@ -515,11 +502,10 @@
     min-height: calc(100vw - 28px);
   }
   .ev-hero__content { padding: 0 20px 40px; }
-  .ev-hero__badge { margin-bottom: 14px; }
-  .ev-hero__title { margin-bottom: 14px; }
-  .ev-hero__lede { display: none; }
 
-  .ps-intro { padding: 72px 20px 0; }
+  .ev-hero-lede { padding: 40px 20px 0; }
+
+  .ps-intro { padding: 48px 20px 0; }
   .ps-tiers { padding: 56px 20px 24px; }
   .ps-productions { padding: 16px 20px 40px; }
   .ps-gallery { padding: 56px 20px 40px; }

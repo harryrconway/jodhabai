@@ -61,7 +61,6 @@
   font-family: var(--sans);
   font-size: var(--body-size);
   letter-spacing: 0.22em;
-  text-transform: uppercase;
   color: rgba(255, 255, 255, 0.78);
 }
 
@@ -81,7 +80,6 @@
   font-size: var(--body-size);
   font-weight: 500;
   letter-spacing: 0.24em;
-  text-transform: uppercase;
   color: rgba(255, 255, 255, 0.78);
   margin-bottom: 18px;
 }
@@ -198,7 +196,6 @@
   font-family: var(--sans);
   font-size: var(--body-size);
   letter-spacing: 0.2em;
-  text-transform: uppercase;
   color: rgba(255, 255, 255, 0.45);
 }
 
@@ -311,7 +308,6 @@
   font-size: var(--body-size);
   font-weight: 500;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
   color: rgba(255, 255, 255, 0.7);
   padding: 20px 12px 18px;
   transition: color 0.25s var(--ease);
@@ -416,7 +412,7 @@
 .legal-modal__heading {
   font-family: var(--serif);
   font-weight: 300;
-  font-size: var(--title-size);
+  font-size: var(--body-size);
   line-height: 1.1;
   letter-spacing: -0.02em;
   color: #fff;
@@ -429,7 +425,6 @@
   font-weight: 600;
   font-size: var(--body-size);
   letter-spacing: 0.14em;
-  text-transform: uppercase;
   color: rgba(255, 255, 255, 0.95);
   margin: 28px 0 10px;
 }

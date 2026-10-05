@@ -98,7 +98,6 @@
   font-size: var(--body-size);
   font-weight: 500;
   letter-spacing: 0.3em;
-  text-transform: uppercase;
   color: rgba(243, 237, 225, 0.8);
   margin-bottom: 24px;
 }
@@ -179,7 +178,6 @@
   font-size: var(--body-size);
   font-weight: 500;
   letter-spacing: 0.22em;
-  text-transform: uppercase;
   color: var(--muted);
   opacity: 0.6;
 }
@@ -412,30 +410,8 @@ a.contact__detail:hover .contact__detail-value {
   color: var(--ink);
 }
 
-.cf-select__opt:hover .cf-select__num {
-  opacity: 0.8;
-}
-
 .cf-select__opt.is-selected {
   background: rgba(28, 29, 26, 0.03);
-}
-
-.cf-select__opt.is-selected .cf-select__num {
-  color: var(--accent);
-  opacity: 1;
-}
-
-.cf-select__num {
-  font-family: var(--sans);
-  font-size: var(--body-size);
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--muted);
-  opacity: 0.5;
-  flex-shrink: 0;
-  min-width: 18px;
-  transition: color 0.25s ease, opacity 0.25s ease;
 }
 
 .cf-select__opt-text {
@@ -582,7 +558,6 @@ a.contact__detail:hover .contact__detail-value {
   font-size: var(--body-size);
   font-weight: 500;
   letter-spacing: 0.22em;
-  text-transform: uppercase;
   color: var(--muted);
   opacity: 0.5;
   margin: 6px 0 0;
@@ -659,7 +634,7 @@ a.contact__detail:hover .contact__detail-value {
 .ct-thanks__title {
   font-family: var(--serif);
   font-weight: 300;
-  font-size: var(--title-size);
+  font-size: var(--body-size);
   line-height: 0.92;
   letter-spacing: -0.03em;
   color: var(--cream);
@@ -679,7 +654,6 @@ a.contact__detail:hover .contact__detail-value {
   font-size: var(--body-size);
   font-weight: 400;
   letter-spacing: 0.22em;
-  text-transform: uppercase;
   color: rgba(243, 237, 225, 0.7);
   margin: 0 0 8px;
   opacity: 0;
@@ -705,7 +679,6 @@ a.contact__detail:hover .contact__detail-value {
   font-size: var(--body-size);
   font-weight: 500;
   letter-spacing: 0.2em;
-  text-transform: uppercase;
   color: rgba(243, 237, 225, 0.75);
   text-decoration: none;
   padding: 12px 22px;
