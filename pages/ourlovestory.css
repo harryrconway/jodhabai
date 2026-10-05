@@ -138,16 +138,6 @@
   padding: 0 8vw 10vh;
 }
 
-.story-hero__badge {
-  display: block;
-  font-family: var(--sans);
-  font-size: var(--body-size);
-  font-weight: 500;
-  letter-spacing: 0.3em;
-  color: rgba(243, 237, 225, 0.8);
-  margin-bottom: 28px;
-}
-
 .story-hero__title {
   font-family: var(--serif);
   font-weight: 300;
@@ -156,38 +146,11 @@
   line-height: 0.95;
   letter-spacing: -0.025em;
   color: var(--cream);
-  margin: 0 0 32px;
+  margin: 0;
 }
 
 .story-hero__title em {
   font-style: italic;
-}
-
-.story-hero__sub {
-  display: inline-block;
-  font-family: var(--sans);
-  font-size: var(--body-size);
-  font-weight: 400;
-  letter-spacing: 0.22em;
-  color: rgba(243, 237, 225, 0.95);
-  margin: 0;
-  background: rgba(20, 21, 15, 0.72);
-  padding: 10px 16px;
-  border-radius: 12px;
-}
-
-.story-hero__span {
-  display: inline-block;
-  font-family: var(--serif);
-  font-style: italic;
-  font-weight: 300;
-  font-size: var(--body-size);
-  letter-spacing: 0.08em;
-  color: rgba(243, 237, 225, 0.9);
-  margin-top: 14px;
-  background: rgba(20, 21, 15, 0.72);
-  padding: 8px 16px;
-  border-radius: 12px;
 }
 
 /* =========================================================
@@ -205,14 +168,14 @@
   margin: 0 auto;
 }
 
-.story-intro__eyebrow {
+.story-intro__byline {
   display: block;
   font-family: var(--sans);
   font-size: var(--body-size);
-  font-weight: 500;
-  letter-spacing: 0.28em;
+  font-weight: 400;
+  letter-spacing: 0;
   color: var(--muted);
-  margin-bottom: 28px;
+  margin: 0 0 28px;
 }
 
 .story-intro__lede {
