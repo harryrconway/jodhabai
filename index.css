@@ -200,13 +200,13 @@
   margin-top: 36px;
   font-family: var(--sans);
   font-weight: 400;
-  font-size: var(--title-size);
+  font-size: var(--body-size);
   letter-spacing: 0;
   color: rgba(15, 15, 13, 0.62);
 }
 
 .intro__sign-mark {
-  font-size: var(--title-size);
+  font-size: var(--body-size);
   line-height: 1;
   display: inline-block;
   transform: translateY(-1px);
