@@ -332,12 +332,16 @@
 
 .about-estate__lede {
   font-family: var(--sans);
-  font-size: 36px;
+  font-size: clamp(16px, 1.1vw, 19px);
   font-weight: 400;
-  line-height: 1.75;
+  line-height: 1.7;
   color: var(--muted);
   max-width: 56ch;
-  margin: 0 0 32px;
+  margin: 0 0 18px;
+}
+
+.about-estate__lede:last-of-type {
+  margin-bottom: 32px;
 }
 
 .about-estate__link {
@@ -408,10 +412,20 @@
   margin-bottom: 10px;
 }
 
+.about-estate__fact-title {
+  display: block;
+  font-family: var(--sans);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
 .about-estate__fact-label {
   display: block;
   font-family: var(--sans);
-  font-size: 28px;
+  font-size: clamp(16px, 1.1vw, 19px);
   font-weight: 300;
   line-height: 1.6;
   color: var(--muted);
@@ -976,7 +990,7 @@
 .occasions__lede {
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(36px, 3.2vw, 44px);
+  font-size: clamp(18px, 1.3vw, 20px);
   line-height: 1.55;
   color: var(--muted);
   margin: 0;
@@ -1042,8 +1056,8 @@
 .occasion__title {
   font-family: var(--serif);
   font-weight: 300;
-  font-size: clamp(40px, 6vw, 92px);
-  line-height: 0.98;
+  font-size: clamp(28px, 2.8vw, 38px);
+  line-height: 1.05;
   letter-spacing: -0.02em;
   transition: transform 0.5s var(--ease);
 }
@@ -1071,7 +1085,7 @@
 
 .occasion__desc {
   font-family: var(--sans);
-  font-size: 28px;
+  font-size: clamp(16px, 1.1vw, 19px);
   font-weight: 300;
   line-height: 1.6;
   color: var(--muted);
