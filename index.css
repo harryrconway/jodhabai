@@ -705,14 +705,14 @@
 .zoom-mosaic__line--1 {
   font-family: var(--serif);
   font-weight: 300;
-  font-size: var(--body-size);
+  font-size: var(--title-size);
 }
 
 .zoom-mosaic__line--2 {
   font-family: var(--serif);
   font-style: italic;
   font-weight: 400;
-  font-size: var(--body-size);
+  font-size: var(--title-size);
   margin-top: 0.04em;
 }
 
