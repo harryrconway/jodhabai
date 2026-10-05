@@ -132,11 +132,11 @@
 /* Body copy — large editorial serif. Each character is its own span and
    "fills with ink" from top to bottom as the user scrolls past. */
 .intro__paragraph {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-weight: 400;
   font-size: var(--body-size);
   line-height: 1.6;
-  letter-spacing: -0.012em;
+  letter-spacing: 0;
   color: var(--ink);
   margin: 0;
   text-align: left;
@@ -168,18 +168,6 @@
   will-change: clip-path;
 }
 
-/* Oversize the very first generated character (the W of "Welcome") so it
-   reads as an editorial drop-initial. The ::before clone scales with it,
-   so the ink-fill effect still works on this letter. */
-.intro__paragraph .intro__word:first-child .intro__char:first-child {
-  font-style: italic;
-  font-size: 2.6em;
-  line-height: 0.8;
-  vertical-align: -0.18em;
-  margin-right: 0.04em;
-  letter-spacing: -0.02em;
-}
-
 /* --- Editorial header row above the paragraph --- */
 .intro__meta {
   display: flex;
@@ -187,17 +175,9 @@
   gap: 22px;
   margin-bottom: 32px;
   font-family: var(--sans);
-  font-size: var(--body-size);
-  letter-spacing: 0.22em;
-  color: var(--ink);
-}
-
-.intro__index {
-  font-family: var(--serif);
-  font-style: italic;
+  font-weight: 400;
   font-size: var(--body-size);
   letter-spacing: 0;
-  text-transform: none;
   color: var(--ink);
 }
 
@@ -209,47 +189,21 @@
 }
 
 .intro__tag {
-  font-weight: 500;
+  font-weight: 400;
   opacity: 0.78;
 }
 
-/* --- Italic signoff under the paragraph --- */
+/* --- Signoff under the paragraph --- */
 .intro__sign {
   display: flex;
   align-items: center;
   gap: 14px;
   margin-top: 36px;
-  font-family: var(--serif);
-  font-size: var(--body-size);
-  color: rgba(15, 15, 13, 0.62);
-}
-
-.intro__google {
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  margin-top: 24px;
-  text-decoration: none;
-  transition: opacity 0.3s var(--ease);
-}
-
-.intro__google:hover {
-  opacity: 0.65;
-}
-
-.intro__google-stars {
-  color: var(--accent);
-  font-size: var(--body-size);
-  letter-spacing: 3px;
-  line-height: 1;
-}
-
-.intro__google-text {
   font-family: var(--sans);
-  font-size: var(--body-size);
   font-weight: 400;
-  letter-spacing: 0.08em;
-  color: var(--muted);
+  font-size: var(--body-size);
+  letter-spacing: 0;
+  color: rgba(15, 15, 13, 0.62);
 }
 
 .intro__sign-mark {
@@ -311,12 +265,12 @@
 
 .about-estate__title {
   font-family: var(--serif);
-  font-weight: 300;
+  font-weight: 600;
   font-size: var(--body-size);
-  line-height: 1.05;
-  letter-spacing: -0.02em;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
   color: var(--ink);
-  margin: 0 0 24px;
+  margin: 0 0 28px;
 }
 
 .about-estate__title em {
@@ -399,12 +353,12 @@
 
 .about-estate__fact-num {
   display: block;
-  font-family: var(--serif);
-  font-style: italic;
-  font-weight: 400;
+  font-family: var(--sans);
+  font-weight: 700;
   font-size: var(--body-size);
+  letter-spacing: 0.01em;
   color: var(--accent);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .about-estate__fact-title {
@@ -421,7 +375,7 @@
   display: block;
   font-family: var(--sans);
   font-size: var(--body-size);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.6;
   color: var(--muted);
   max-width: 32ch;
@@ -1268,13 +1222,6 @@
     /* Bottom padding stripped — the signoff line should sit flush
        against the gallery / mosaic below on mobile. */
     padding: 28px 22px 0;
-  }
-  .intro__google {
-    gap: 10px;
-    margin-top: 32px;
-  }
-  .intro__google-stars {
-    letter-spacing: 2px;
   }
   .gallery {
     /* Top padding zeroed so it butts directly up against the intro
