@@ -99,7 +99,7 @@
 .ev-hero__badge {
   display: block;
   font-family: var(--sans);
-  font-size: 22px;
+  font-size: var(--body-size);
   font-weight: 500;
   letter-spacing: 0.3em;
   text-transform: uppercase;
@@ -110,7 +110,7 @@
 .ev-hero__title {
   font-family: var(--serif);
   font-weight: 300;
-  font-size: clamp(32px, 4.5vw, 72px);
+  font-size: var(--title-size);
   line-height: 0.95;
   letter-spacing: -0.025em;
   color: var(--cream);
@@ -125,7 +125,7 @@
   display: inline-block;
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(16px, 1.1vw, 19px);
+  font-size: var(--body-size);
   line-height: 1.6;
   color: rgba(243, 237, 225, 0.95);
   max-width: 54ch;
@@ -227,7 +227,7 @@
   display: block;
   font-family: var(--serif);
   font-style: italic;
-  font-size: 15px;
+  font-size: var(--body-size);
   color: var(--accent);
   margin-bottom: 18px;
 }
@@ -235,7 +235,7 @@
 .ev-chapter__title {
   font-family: var(--serif);
   font-weight: 300;
-  font-size: clamp(28px, 2.8vw, 38px);
+  font-size: var(--title-size);
   line-height: 1.05;
   letter-spacing: -0.02em;
   color: var(--ink);
@@ -246,14 +246,13 @@
   font-family: var(--serif);
   font-style: italic;
   font-weight: 400;
-  font-size: 0.72em;
   color: var(--accent);
   white-space: nowrap;
 }
 
 .ev-chapter__text {
   font-family: var(--sans);
-  font-size: clamp(16px, 1.1vw, 19px);
+  font-size: var(--body-size);
   font-weight: 400;
   line-height: 1.7;
   color: var(--muted);
@@ -267,7 +266,7 @@
   align-items: center;
   gap: 16px;
   font-family: var(--sans);
-  font-size: 12px;
+  font-size: var(--body-size);
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -340,7 +339,7 @@
 .ev-proposal__tag {
   display: block;
   font-family: var(--sans);
-  font-size: 22px;
+  font-size: var(--body-size);
   font-weight: 500;
   letter-spacing: 0.32em;
   text-transform: uppercase;
@@ -351,7 +350,7 @@
 .ev-proposal__title {
   font-family: var(--serif);
   font-weight: 300;
-  font-size: clamp(28px, 2.8vw, 38px);
+  font-size: var(--title-size);
   line-height: 1.05;
   letter-spacing: -0.02em;
   color: var(--ink);
@@ -368,7 +367,7 @@
 .ev-proposal__lede {
   font-family: var(--sans);
   font-weight: 400;
-  font-size: clamp(16px, 1.1vw, 19px);
+  font-size: var(--body-size);
   line-height: 1.7;
   color: var(--muted);
   max-width: 42ch;
@@ -389,14 +388,14 @@
   gap: 14px;
   font-family: var(--sans);
   font-weight: 400;
-  font-size: clamp(16px, 1.1vw, 19px);
+  font-size: var(--body-size);
   color: var(--ink);
   line-height: 1.5;
 }
 
 .ev-proposal__mark {
   flex: 0 0 auto;
-  font-size: 12px;
+  font-size: var(--body-size);
   color: var(--accent);
   margin-top: 3px;
 }
@@ -404,7 +403,7 @@
 .ev-proposal__addons {
   font-family: var(--sans);
   font-weight: 400;
-  font-size: clamp(16px, 1.1vw, 19px);
+  font-size: var(--body-size);
   line-height: 1.7;
   color: var(--muted);
   border-top: 1px solid var(--line);
@@ -414,7 +413,7 @@
 
 .ev-proposal__addons-label {
   display: block;
-  font-size: 22px;
+  font-size: var(--body-size);
   font-weight: 500;
   letter-spacing: 0.24em;
   text-transform: uppercase;
@@ -462,7 +461,7 @@
 .ev-scope__tag {
   display: block;
   font-family: var(--sans);
-  font-size: 22px;
+  font-size: var(--body-size);
   font-weight: 500;
   letter-spacing: 0.32em;
   text-transform: uppercase;
@@ -473,7 +472,7 @@
 .ev-scope__title {
   font-family: var(--serif);
   font-weight: 300;
-  font-size: clamp(28px, 2.8vw, 38px);
+  font-size: var(--title-size);
   line-height: 1.05;
   letter-spacing: -0.02em;
   color: var(--ink);
@@ -516,14 +515,14 @@
 .ev-scope__item-title {
   font-family: var(--serif);
   font-style: italic;
-  font-size: clamp(18px, 1.6vw, 22px);
+  font-size: var(--body-size);
   color: var(--ink);
   transition: color 0.35s var(--ease);
 }
 
 .ev-scope__item-desc {
   font-family: var(--sans);
-  font-size: clamp(16px, 1.1vw, 19px);
+  font-size: var(--body-size);
   font-weight: 400;
   line-height: 1.5;
   color: var(--muted);
@@ -532,7 +531,7 @@
 
 .ev-scope__mark {
   flex: 0 0 auto;
-  font-size: 13px;
+  font-size: var(--body-size);
   font-style: normal;
   color: var(--accent);
   margin-top: 6px;
@@ -568,12 +567,6 @@
   .ev-scope__item {
     padding: 22px 4px;
   }
-  .ev-scope__item-title {
-    font-size: 17px;
-  }
-  .ev-scope__item-desc {
-    font-size: 12px;
-  }
 }
 
 /* =========================================================
@@ -594,7 +587,7 @@
 .ev-previous__tag {
   display: block;
   font-family: var(--sans);
-  font-size: 22px;
+  font-size: var(--body-size);
   font-weight: 500;
   letter-spacing: 0.28em;
   text-transform: uppercase;
@@ -670,7 +663,7 @@
 
 .ev-cta__mark {
   display: block;
-  font-size: 18px;
+  font-size: var(--body-size);
   color: var(--accent);
   margin-bottom: 24px;
 }
@@ -678,7 +671,7 @@
 .ev-cta__kicker {
   display: inline-block;
   font-family: var(--sans);
-  font-size: 22px;
+  font-size: var(--body-size);
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--muted);
@@ -688,7 +681,7 @@
 .ev-cta__title {
   font-family: var(--serif);
   font-weight: 300;
-  font-size: clamp(48px, 7vw, 96px);
+  font-size: var(--title-size);
   line-height: 1;
   letter-spacing: -0.02em;
   color: var(--ink);
@@ -705,15 +698,11 @@
 .ev-cta__lede {
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(16px, 1.1vw, 19px);
+  font-size: var(--body-size);
   line-height: 1.6;
   color: var(--muted);
   max-width: 46ch;
   margin: 0 auto 48px;
-}
-
-.ev-cta .cta {
-  font-size: 18px;
 }
 
 /* =========================================================
@@ -768,11 +757,9 @@
     padding: 0 20px 40px;
   }
   .ev-hero__badge {
-    font-size: 12px;
     margin-bottom: 14px;
   }
   .ev-hero__title {
-    font-size: clamp(24px, 8vw, 36px);
     margin-bottom: 14px;
   }
   .ev-hero__lede {
@@ -790,7 +777,6 @@
   }
   .ev-chapter__text {
     max-width: 100%;
-    font-size: 16px;
   }
   .ev-chapter__link-arrow {
     width: 38px;
@@ -798,31 +784,14 @@
   }
 
   .ev-proposal__tag {
-    font-size: 12px;
     letter-spacing: 0.22em;
   }
-  .ev-proposal__title {
-    font-size: clamp(28px, 9vw, 38px);
-  }
   .ev-proposal__lede {
-    font-size: 16px;
     max-width: 100%;
-  }
-  .ev-proposal__inc li {
-    font-size: 15px;
-  }
-  .ev-proposal__addons {
-    font-size: 15px;
-  }
-  .ev-proposal__addons-label {
-    font-size: 11px;
   }
 
   .ev-cta {
     padding: 88px 24px 120px;
     border-radius: 0 0 28px 28px;
-  }
-  .ev-cta__title {
-    font-size: clamp(38px, 12vw, 56px);
   }
 }

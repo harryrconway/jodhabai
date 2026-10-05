@@ -112,7 +112,7 @@
 .ev-hero__badge {
   display: block;
   font-family: var(--sans);
-  font-size: 22px;
+  font-size: var(--body-size);
   font-weight: 500;
   letter-spacing: 0.3em;
   text-transform: uppercase;
@@ -123,7 +123,7 @@
 .ev-hero__title {
   font-family: var(--serif);
   font-weight: 300;
-  font-size: clamp(32px, 4.5vw, 72px);
+  font-size: var(--title-size);
   line-height: 0.95;
   letter-spacing: -0.025em;
   color: var(--cream);
@@ -138,7 +138,7 @@
   display: inline-block;
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(16px, 1.1vw, 19px);
+  font-size: var(--body-size);
   line-height: 1.6;
   color: rgba(243, 237, 225, 0.95);
   max-width: 68ch;
@@ -174,7 +174,7 @@
 .ps-intro__tag {
   display: block;
   font-family: var(--sans);
-  font-size: 22px;
+  font-size: var(--body-size);
   font-weight: 500;
   letter-spacing: 0.28em;
   text-transform: uppercase;
@@ -186,7 +186,7 @@
 .ps-intro__lede {
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(16px, 1.1vw, 19px);
+  font-size: var(--body-size);
   line-height: 1.6;
   color: var(--ink);
   margin: 0 0 20px;
@@ -195,7 +195,7 @@
 .ps-intro__note {
   font-family: var(--sans);
   font-weight: 400;
-  font-size: clamp(16px, 1.1vw, 19px);
+  font-size: var(--body-size);
   line-height: 1.6;
   color: var(--muted);
   margin: 0;
@@ -241,7 +241,7 @@
   display: block;
   font-family: var(--serif);
   font-weight: 300;
-  font-size: clamp(22px, 2.4vw, 34px);
+  font-size: var(--body-size);
   line-height: 1.1;
   letter-spacing: -0.01em;
   color: var(--ink);
@@ -252,7 +252,7 @@
 .ps-tier__cap {
   display: block;
   font-family: var(--sans);
-  font-size: 24px;
+  font-size: var(--body-size);
   font-weight: 400;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -272,7 +272,7 @@
 .ps-option__name {
   display: block;
   font-family: var(--sans);
-  font-size: 13px;
+  font-size: var(--body-size);
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -291,7 +291,7 @@
 
 .ps-option__inc li {
   font-family: var(--sans);
-  font-size: clamp(16px, 1.1vw, 19px);
+  font-size: var(--body-size);
   font-weight: 400;
   line-height: 1.5;
   color: var(--muted);
@@ -311,7 +311,7 @@
   font-family: var(--serif);
   font-weight: 400;
   font-style: italic;
-  font-size: clamp(16px, 1.1vw, 19px);
+  font-size: var(--body-size);
   line-height: 1.5;
   color: var(--accent);
   border-top: 1px solid var(--line);
@@ -321,7 +321,7 @@
 .ps-tier--quote .ps-tier__quote-text {
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(16px, 1.1vw, 19px);
+  font-size: var(--body-size);
   line-height: 1.6;
   color: var(--muted);
   margin: 0;
@@ -359,7 +359,7 @@
 .ps-gallery__tag {
   display: block;
   font-family: var(--sans);
-  font-size: 22px;
+  font-size: var(--body-size);
   font-weight: 500;
   letter-spacing: 0.28em;
   text-transform: uppercase;
@@ -391,7 +391,7 @@
 .ps-productions__tag {
   display: block;
   font-family: var(--sans);
-  font-size: 22px;
+  font-size: var(--body-size);
   font-weight: 500;
   letter-spacing: 0.28em;
   text-transform: uppercase;
@@ -403,7 +403,7 @@
 .ps-productions__lede {
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(16px, 1.1vw, 19px);
+  font-size: var(--body-size);
   color: var(--ink);
   max-width: 560px;
   line-height: 1.4;
@@ -438,7 +438,7 @@
 
 .ev-cta__mark {
   display: block;
-  font-size: 18px;
+  font-size: var(--body-size);
   color: var(--accent);
   margin-bottom: 24px;
 }
@@ -446,7 +446,7 @@
 .ev-cta__kicker {
   display: inline-block;
   font-family: var(--sans);
-  font-size: 22px;
+  font-size: var(--body-size);
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--muted);
@@ -456,7 +456,7 @@
 .ev-cta__title {
   font-family: var(--serif);
   font-weight: 300;
-  font-size: clamp(48px, 7vw, 96px);
+  font-size: var(--title-size);
   line-height: 1;
   letter-spacing: -0.02em;
   color: var(--ink);
@@ -473,15 +473,11 @@
 .ev-cta__lede {
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(16px, 1.1vw, 19px);
+  font-size: var(--body-size);
   line-height: 1.6;
   color: var(--muted);
   max-width: 46ch;
   margin: 0 auto 48px;
-}
-
-.ev-cta .cta {
-  font-size: 18px;
 }
 
 /* =========================================================
@@ -519,16 +515,12 @@
     min-height: calc(100vw - 28px);
   }
   .ev-hero__content { padding: 0 20px 40px; }
-  .ev-hero__badge { font-size: 12px; margin-bottom: 14px; }
-  .ev-hero__title { font-size: clamp(24px, 8vw, 36px); margin-bottom: 14px; }
+  .ev-hero__badge { margin-bottom: 14px; }
+  .ev-hero__title { margin-bottom: 14px; }
   .ev-hero__lede { display: none; }
 
   .ps-intro { padding: 72px 20px 0; }
   .ps-tiers { padding: 56px 20px 24px; }
-  .ps-tier__cat { font-size: clamp(22px, 7vw, 28px); }
-  .ps-tier__cap { font-size: 13px; }
-  .ps-option__inc li { font-size: 16px; }
-  .ps-tier__multiday { font-size: 15px; }
   .ps-productions { padding: 16px 20px 40px; }
   .ps-gallery { padding: 56px 20px 40px; }
 
@@ -536,5 +528,4 @@
     padding: 88px 24px 120px;
     border-radius: 0 0 28px 28px;
   }
-  .ev-cta__title { font-size: clamp(38px, 12vw, 56px); }
 }
