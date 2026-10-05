@@ -357,7 +357,7 @@
   width: 100%;
   font-family: var(--sans);
   font-weight: 400;
-  font-size: var(--body-size);
+  font-size: var(--title-size);
   line-height: 1;
   color: var(--cream);
   text-align: right;
