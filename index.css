@@ -95,7 +95,7 @@
   gap: 22px;
   color: #fff;
   font-family: var(--sans);
-  font-size: 36px;
+  font-size: var(--body-size);
   font-weight: 400;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -188,7 +188,7 @@
   gap: 22px;
   margin-bottom: 32px;
   font-family: var(--sans);
-  font-size: 12px;
+  font-size: var(--body-size);
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--ink);
@@ -197,7 +197,7 @@
 .intro__index {
   font-family: var(--serif);
   font-style: italic;
-  font-size: 22px;
+  font-size: var(--body-size);
   letter-spacing: 0;
   text-transform: none;
   color: var(--ink);
@@ -222,7 +222,7 @@
   gap: 14px;
   margin-top: 36px;
   font-family: var(--serif);
-  font-size: 18px;
+  font-size: var(--body-size);
   color: rgba(15, 15, 13, 0.62);
 }
 
@@ -241,14 +241,14 @@
 
 .intro__google-stars {
   color: var(--accent);
-  font-size: 20px;
+  font-size: var(--body-size);
   letter-spacing: 3px;
   line-height: 1;
 }
 
 .intro__google-text {
   font-family: var(--sans);
-  font-size: 20px;
+  font-size: var(--body-size);
   font-weight: 400;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -256,7 +256,7 @@
 }
 
 .intro__sign-mark {
-  font-size: 22px;
+  font-size: var(--body-size);
   line-height: 1;
   display: inline-block;
   transform: translateY(-1px);
@@ -305,7 +305,7 @@
 .about-estate__tag {
   display: block;
   font-family: var(--sans);
-  font-size: 22px;
+  font-size: var(--body-size);
   font-weight: 500;
   letter-spacing: 0.32em;
   text-transform: uppercase;
@@ -316,7 +316,7 @@
 .about-estate__title {
   font-family: var(--serif);
   font-weight: 300;
-  font-size: clamp(34px, 4.4vw, 64px);
+  font-size: var(--title-size);
   line-height: 1.05;
   letter-spacing: -0.02em;
   color: var(--ink);
@@ -332,7 +332,7 @@
 
 .about-estate__lede {
   font-family: var(--sans);
-  font-size: clamp(16px, 1.1vw, 19px);
+  font-size: var(--body-size);
   font-weight: 400;
   line-height: 1.7;
   color: var(--muted);
@@ -349,7 +349,7 @@
   align-items: center;
   gap: 16px;
   font-family: var(--sans);
-  font-size: 24px;
+  font-size: var(--body-size);
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -407,7 +407,7 @@
   font-family: var(--serif);
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(52px, 4.8vw, 68px);
+  font-size: var(--body-size);
   color: var(--accent);
   margin-bottom: 10px;
 }
@@ -415,7 +415,7 @@
 .about-estate__fact-title {
   display: block;
   font-family: var(--sans);
-  font-size: 18px;
+  font-size: var(--body-size);
   font-weight: 600;
   letter-spacing: 0.01em;
   color: var(--ink);
@@ -425,7 +425,7 @@
 .about-estate__fact-label {
   display: block;
   font-family: var(--sans);
-  font-size: clamp(16px, 1.1vw, 19px);
+  font-size: var(--body-size);
   font-weight: 300;
   line-height: 1.6;
   color: var(--muted);
@@ -557,7 +557,7 @@
   font-family: var(--serif);
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(28px, 3vw, 44px);
+  font-size: var(--body-size);
   line-height: 1;
   letter-spacing: -0.005em;
   color: rgba(243, 237, 225, 0.95);
@@ -657,14 +657,14 @@
 
 .zoom-mosaic__badge-rating {
   font-family: var(--sans);
-  font-size: 13px;
+  font-size: var(--body-size);
   font-weight: 400;
   color: var(--ink);
   line-height: 1;
 }
 
 .zoom-mosaic__badge-stars {
-  font-size: 13px;
+  font-size: var(--body-size);
   letter-spacing: 1px;
   color: #f5b400;
   line-height: 1;
@@ -756,14 +756,14 @@
 .zoom-mosaic__line--1 {
   font-family: var(--serif);
   font-weight: 300;
-  font-size: clamp(40px, 6vw, 92px);
+  font-size: var(--title-size);
 }
 
 .zoom-mosaic__line--2 {
   font-family: var(--serif);
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(60px, 9.5vw, 152px);
+  font-size: var(--title-size);
   margin-top: 0.04em;
 }
 
@@ -808,8 +808,6 @@
     gap: 6px;
   }
   .zoom-mosaic__badge-g { width: 15px; height: 15px; }
-  .zoom-mosaic__badge-rating { font-size: 11px; }
-  .zoom-mosaic__badge-stars { font-size: 11px; }
   .zoom-mosaic__grid {
     column-gap: 14px;
     row-gap: 12px;
@@ -855,7 +853,7 @@
 .how-it-works__tag {
   display: block;
   font-family: var(--sans);
-  font-size: 22px;
+  font-size: var(--body-size);
   font-weight: 500;
   letter-spacing: 0.32em;
   text-transform: uppercase;
@@ -866,7 +864,7 @@
 .how-it-works__title {
   font-family: var(--serif);
   font-weight: 300;
-  font-size: clamp(34px, 4.4vw, 56px);
+  font-size: var(--title-size);
   line-height: 1.05;
   letter-spacing: -0.02em;
   color: var(--cream);
@@ -895,7 +893,7 @@
   display: block;
   font-family: var(--serif);
   font-style: italic;
-  font-size: 15px;
+  font-size: var(--body-size);
   color: rgba(243, 237, 225, 0.5);
   margin-bottom: 14px;
 }
@@ -903,7 +901,7 @@
 .how-it-works__step-title {
   font-family: var(--serif);
   font-weight: 300;
-  font-size: clamp(22px, 2vw, 28px);
+  font-size: var(--body-size);
   letter-spacing: -0.01em;
   color: var(--cream);
   margin: 0 0 10px;
@@ -911,7 +909,7 @@
 
 .how-it-works__step-desc {
   font-family: var(--sans);
-  font-size: 15px;
+  font-size: var(--body-size);
   line-height: 1.6;
   color: rgba(243, 237, 225, 0.7);
   max-width: 32ch;
@@ -973,7 +971,7 @@
 
 .occasions__tag {
   font-family: var(--sans);
-  font-size: 22px;
+  font-size: var(--body-size);
   font-weight: 500;
   letter-spacing: 0.32em;
   text-transform: uppercase;
@@ -990,7 +988,7 @@
 .occasions__lede {
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(18px, 1.3vw, 20px);
+  font-size: var(--body-size);
   line-height: 1.55;
   color: var(--muted);
   margin: 0;
@@ -1002,7 +1000,7 @@
    "what does this place actually offer". */
 .occasions__explainer {
   font-family: var(--sans);
-  font-size: clamp(14px, 1vw, 15px);
+  font-size: var(--body-size);
   line-height: 1.6;
   color: var(--ink);
   margin: 0;
@@ -1049,14 +1047,14 @@
 .occasion__num {
   font-family: var(--serif);
   font-style: italic;
-  font-size: 15px;
+  font-size: var(--body-size);
   color: var(--accent);
 }
 
 .occasion__title {
   font-family: var(--serif);
   font-weight: 300;
-  font-size: clamp(28px, 2.8vw, 38px);
+  font-size: var(--body-size);
   line-height: 1.05;
   letter-spacing: -0.02em;
   transition: transform 0.5s var(--ease);
@@ -1067,7 +1065,6 @@
   font-style: italic;
   font-weight: 400;
   color: var(--accent);
-  font-size: 0.72em;
   letter-spacing: -0.01em;
   white-space: nowrap;
 }
@@ -1085,7 +1082,7 @@
 
 .occasion__desc {
   font-family: var(--sans);
-  font-size: clamp(16px, 1.1vw, 19px);
+  font-size: var(--body-size);
   font-weight: 300;
   line-height: 1.6;
   color: var(--muted);
@@ -1186,7 +1183,7 @@
 
 .occasion-label__text {
   font-family: var(--sans);
-  font-size: 22px;
+  font-size: var(--body-size);
   font-weight: 500;
   letter-spacing: 0.24em;
   text-transform: uppercase;
@@ -1284,7 +1281,6 @@
        narrower phones without wrapping. */
     left: 16px;
     bottom: 32px;
-    font-size: 13px;
     gap: 10px;
     letter-spacing: 0.12em;
   }
@@ -1302,11 +1298,7 @@
     margin-top: 32px;
   }
   .intro__google-stars {
-    font-size: 14px;
     letter-spacing: 2px;
-  }
-  .intro__google-text {
-    font-size: 12px;
   }
   .gallery {
     /* Top padding zeroed so it butts directly up against the intro
@@ -1354,7 +1346,6 @@
     opacity: 1;
   }
   .gallery__label {
-    font-size: 18px;
     right: 38px;
     bottom: 16px;
   }
@@ -1372,7 +1363,6 @@
     text-align: left;
   }
   .occasions__lede {
-    font-size: 20px;
     line-height: 1.5;
   }
   .occasion {
@@ -1397,9 +1387,6 @@
     object-fit: cover;
     display: block;
   }
-  .occasion__num {
-    font-size: 13px;
-  }
   .occasion:hover .occasion__title {
     transform: none;
   }
@@ -1422,7 +1409,6 @@
     padding: 8px 20px 80px;
   }
   .about-estate__lede {
-    font-size: 18px;
     line-height: 1.6;
   }
 }
@@ -1467,7 +1453,7 @@
 
 .loader__welcome {
   font-family: var(--sans);
-  font-size: 24px;
+  font-size: var(--body-size);
   font-weight: 400;
   letter-spacing: 0.3em;
   text-transform: uppercase;
@@ -1491,7 +1477,7 @@
    plain, fully visible stroke.
    --------------------------------------------------------- */
 .loader__mark {
-  font-size: 18px;
+  font-size: var(--body-size);
   color: rgba(243, 237, 225, 0.45);
 }
 

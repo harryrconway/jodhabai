@@ -19,6 +19,14 @@
   --serif: Arial, Helvetica, system-ui, sans-serif;
   --sans: Arial, Helvetica, system-ui, sans-serif;
 
+  /* The two sizes every text element on the site uses. --title-size is
+     for genuine display headings (hero statements, section/chapter
+     openers); --body-size is for everything else, including small
+     uppercase labels and headings that function as labels. Change these
+     two values to retune the whole site's type scale from one place. */
+  --title-size: clamp(28px, 2.8vw, 38px);
+  --body-size: clamp(16px, 1.1vw, 19px);
+
   --ease: cubic-bezier(0.65, 0.05, 0.35, 1);
 }
 
