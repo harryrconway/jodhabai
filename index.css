@@ -924,11 +924,11 @@
 }
 
 .occasions__lede {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-weight: 400;
   font-size: var(--body-size);
-  line-height: 1.55;
-  color: var(--muted);
+  line-height: 1.6;
+  color: var(--ink);
   margin: 0;
   text-align: right;
 }
@@ -938,6 +938,7 @@
    "what does this place actually offer". */
 .occasions__explainer {
   font-family: var(--sans);
+  font-weight: 400;
   font-size: var(--body-size);
   line-height: 1.6;
   color: var(--ink);
@@ -1284,9 +1285,6 @@
   .occasions__lede,
   .occasions__explainer {
     text-align: left;
-  }
-  .occasions__lede {
-    line-height: 1.5;
   }
   .occasion {
     grid-template-columns: 1fr;
