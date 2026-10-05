@@ -125,7 +125,7 @@
   display: inline-block;
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(18px, 1.6vw, 22px);
+  font-size: clamp(16px, 1.1vw, 19px);
   line-height: 1.6;
   color: rgba(243, 237, 225, 0.95);
   max-width: 54ch;
@@ -235,8 +235,8 @@
 .ev-chapter__title {
   font-family: var(--serif);
   font-weight: 300;
-  font-size: clamp(40px, 5.4vw, 84px);
-  line-height: 0.98;
+  font-size: clamp(28px, 2.8vw, 38px);
+  line-height: 1.05;
   letter-spacing: -0.02em;
   color: var(--ink);
   margin: 0 0 24px;
@@ -253,9 +253,9 @@
 
 .ev-chapter__text {
   font-family: var(--sans);
-  font-size: clamp(34px, 2.6vw, 36px);
+  font-size: clamp(16px, 1.1vw, 19px);
   font-weight: 400;
-  line-height: 1.75;
+  line-height: 1.7;
   color: var(--muted);
   max-width: 46ch;
   margin: 0 0 32px;
@@ -351,7 +351,7 @@
 .ev-proposal__title {
   font-family: var(--serif);
   font-weight: 300;
-  font-size: clamp(30px, 3.6vw, 48px);
+  font-size: clamp(28px, 2.8vw, 38px);
   line-height: 1.05;
   letter-spacing: -0.02em;
   color: var(--ink);
@@ -368,7 +368,7 @@
 .ev-proposal__lede {
   font-family: var(--sans);
   font-weight: 400;
-  font-size: clamp(32px, 2.8vw, 38px);
+  font-size: clamp(16px, 1.1vw, 19px);
   line-height: 1.7;
   color: var(--muted);
   max-width: 42ch;
@@ -389,7 +389,7 @@
   gap: 14px;
   font-family: var(--sans);
   font-weight: 400;
-  font-size: clamp(32px, 2.6vw, 36px);
+  font-size: clamp(16px, 1.1vw, 19px);
   color: var(--ink);
   line-height: 1.5;
 }
@@ -404,7 +404,7 @@
 .ev-proposal__addons {
   font-family: var(--sans);
   font-weight: 400;
-  font-size: 28px;
+  font-size: clamp(16px, 1.1vw, 19px);
   line-height: 1.7;
   color: var(--muted);
   border-top: 1px solid var(--line);
@@ -473,7 +473,7 @@
 .ev-scope__title {
   font-family: var(--serif);
   font-weight: 300;
-  font-size: clamp(30px, 3.6vw, 48px);
+  font-size: clamp(28px, 2.8vw, 38px);
   line-height: 1.05;
   letter-spacing: -0.02em;
   color: var(--ink);
@@ -523,7 +523,7 @@
 
 .ev-scope__item-desc {
   font-family: var(--sans);
-  font-size: 26px;
+  font-size: clamp(16px, 1.1vw, 19px);
   font-weight: 400;
   line-height: 1.5;
   color: var(--muted);
@@ -705,7 +705,7 @@
 .ev-cta__lede {
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(18px, 1.5vw, 21px);
+  font-size: clamp(16px, 1.1vw, 19px);
   line-height: 1.6;
   color: var(--muted);
   max-width: 46ch;
@@ -787,9 +787,6 @@
   }
   .ev-chapter__media {
     border-radius: 18px;
-  }
-  .ev-chapter__title {
-    font-size: clamp(34px, 11vw, 52px);
   }
   .ev-chapter__text {
     max-width: 100%;
