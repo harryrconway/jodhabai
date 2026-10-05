@@ -222,8 +222,7 @@
    ABOUT JODHA BAI ESTATE — replaces the old three-residences
    accommodation section. Two-column: the estate's real story
    (Fatepur Sikri origin, the seven year build) beside a short
-   column of concrete facts, echoing the how-it-works numbered
-   list treatment.
+   column of concrete facts.
    ========================================================= */
 .about-estate {
   position: relative;
@@ -768,109 +767,6 @@
   }
 }
 
-/* =========================================================
-   HOW IT WORKS — dark ink panel between the Residences grid and
-   the Gallery. Three short steps explaining the booking process.
-   The panel is inset from the page edge with soft rounded corners
-   (mirrors the .hero__frame inset-on-cream treatment) rather than
-   running the dark fill edge to edge.
-   ========================================================= */
-.how-it-works {
-  position: relative;
-  z-index: 2;
-  background: var(--cream);
-  padding: 0 56px 130px;
-}
-
-.how-it-works__inner {
-  max-width: 1280px;
-  margin: 0 auto;
-  background: var(--overlay);
-  color: var(--cream);
-  border-radius: 40px;
-  /* Extra top clearance (vs. 90px bottom) — the tag sits top-left,
-     the same corner as the fixed Jodha Bai home pill, and needs to
-     clear it (bottom ~104px from viewport top) whenever this panel's
-     top scrolls near the top of the viewport. */
-  padding: 140px 56px 90px;
-}
-
-.how-it-works__head {
-  margin-bottom: 64px;
-}
-
-.how-it-works__tag {
-  display: block;
-  font-family: var(--sans);
-  font-size: var(--body-size);
-  font-weight: 500;
-  letter-spacing: 0.32em;
-  color: rgba(243, 237, 225, 0.78);
-  margin-bottom: 18px;
-}
-
-.how-it-works__title {
-  font-family: var(--serif);
-  font-weight: 300;
-  font-size: var(--body-size);
-  line-height: 1.05;
-  letter-spacing: -0.02em;
-  color: var(--cream);
-  margin: 0;
-}
-
-.how-it-works__title em {
-  font-family: var(--serif);
-  font-style: italic;
-  font-weight: 400;
-  color: rgba(243, 237, 225, 0.75);
-}
-
-.how-it-works__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 48px;
-}
-
-.how-it-works__step {
-  border-top: 1px solid rgba(243, 237, 225, 0.18);
-  padding-top: 24px;
-}
-
-.how-it-works__step-title {
-  font-family: var(--serif);
-  font-weight: 300;
-  font-size: var(--body-size);
-  letter-spacing: -0.01em;
-  color: var(--cream);
-  margin: 0 0 10px;
-}
-
-.how-it-works__step-desc {
-  font-family: var(--sans);
-  font-size: var(--body-size);
-  line-height: 1.6;
-  color: rgba(243, 237, 225, 0.7);
-  max-width: 32ch;
-  margin: 0;
-}
-
-@media (max-width: 720px) {
-  .how-it-works {
-    padding: 0 14px 72px;
-  }
-  .how-it-works__inner {
-    padding: 56px 22px;
-    border-radius: 24px;
-  }
-  .how-it-works__head {
-    margin-bottom: 40px;
-  }
-  .how-it-works__grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-}
 
 /* =========================================================
    THE OCCASIONS — editorial ledger on cream. Three oversized
