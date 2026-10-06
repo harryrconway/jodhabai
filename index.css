@@ -1112,6 +1112,13 @@
        against the gallery / mosaic below on mobile. */
     padding: 28px 22px 0;
   }
+  .intro__meta,
+  .intro__paragraph {
+    /* Title-size reads oversized on a narrow mobile viewport — drop
+       back to normal body copy size here only; desktop keeps the
+       larger editorial treatment. */
+    font-size: var(--body-size);
+  }
   .gallery {
     /* Top padding zeroed so it butts directly up against the intro
        signoff — no empty cream gap between the two. */
