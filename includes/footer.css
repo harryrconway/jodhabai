@@ -58,18 +58,98 @@
   color: rgba(255, 255, 255, 0.78);
 }
 
-/* ---- Footer columns -- now just the accreditation badges ---- */
+/* ---- Footer columns -- contact details + social on the left,
+   accreditation badges on the right. ---- */
 .site-footer__cols {
   display: flex;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 32px;
   width: 100%;
   padding-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
+.footer-col__title {
+  display: block;
+  font-family: var(--sans);
+  font-size: var(--body-size);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 18px;
+}
 
-/* ---- Accreditation badges -- the only content left in the
-   footer's columns row now that the link columns are gone. ---- */
+.footer-col__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: var(--body-size);
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.footer-col__list a {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  /* The email address has no spaces to wrap at by default, so on a
+     narrow mobile column it was running past the edge instead of
+     wrapping to a second line. */
+  overflow-wrap: break-word;
+  word-break: break-word;
+  color: inherit;
+  transition: color 0.3s var(--ease), transform 0.3s var(--ease);
+}
+
+.footer-col__list a:hover {
+  color: #fff;
+  transform: translateX(3px);
+}
+
+/* ---- Social icons (Instagram + Facebook) ---- */
+.footer-social {
+  list-style: none;
+  margin: 22px 0 0;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.footer-social__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: rgba(255, 255, 255, 0.85);
+  transition: background 0.35s var(--ease), color 0.35s var(--ease),
+    border-color 0.35s var(--ease), transform 0.35s var(--ease);
+}
+
+.footer-social__link svg {
+  width: 18px;
+  height: 18px;
+}
+
+.footer-social__link:hover {
+  /* Flat black, matching .cta, instead of inverting to white — keeps
+     every button on the site in the same dark family. The icon stays
+     light so it still reads clearly against the fill. */
+  background: var(--ink);
+  color: var(--cream);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+/* ---- Accreditation badges ---- */
 .site-footer__accreditation {
   display: flex;
   align-items: center;
@@ -485,11 +565,21 @@
     max-width: 100%;
   }
 
-  .site-footer__top {
+  .site-footer__cols {
+    flex-direction: column;
+    align-items: center;
+    gap: 28px 22px;
   }
 
-  .site-footer__cols {
-    gap: 28px 22px;
+  .footer-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
   }
 
   .site-footer__legal {
